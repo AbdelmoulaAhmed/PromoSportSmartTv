@@ -54,3 +54,5 @@ ENTER
 [INFO] window.onFocusin
 [INFO] window.onShow
 Key pressed: 31
+[INFO] window.onFocusin
+[INFO] window.onShow

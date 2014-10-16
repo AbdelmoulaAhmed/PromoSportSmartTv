@@ -72,7 +72,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_ENTER:
 		case tvKey.KEY_PANEL_ENTER:
-			alert("ENTER");
+			$("#aboutContainer").fadeOut();
 			break;
 		default:
 			alert("Unhandled key");
