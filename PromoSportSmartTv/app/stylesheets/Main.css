@@ -134,3 +134,41 @@ button{
 	color:white;
 	
 }
+#aboutContainer{
+	position:absolute;
+	z-index:999;
+	top:0;
+	left:0;
+	background-color:rgba(0,0,0,0.9);
+	width:95%;
+	height:77%;
+	padding:5%;
+	display:none;
+}
+
+
+#aboutContainer h1{
+	color:white;
+}
+
+#aboutContainer h2{
+	color:white;
+	text-decoration:underline;
+}
+
+.developper{
+	display:inline-block;
+	width:18%;
+	height:43%;
+	text-align:center;
+	margin-right:1%;
+}
+#aboutContainer img{
+	display:block;
+	width:100%;
+	height:100%;
+}
+#aboutContainer span{
+	color:white;
+	font-family:Arial;
+}

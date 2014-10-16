@@ -30,6 +30,9 @@ Main.keyDown = function()
 
 	switch(keyCode)
 	{
+		case tvKey.KEY_INFO:
+			$("#aboutContainer").fadeIn();
+			break;
 		case tvKey.KEY_RETURN:
 		case tvKey.KEY_PANEL_RETURN:
 			alert("RETURN");
