@@ -44,7 +44,7 @@ Main.keyDown = function()
 				$("#sectionInfo").animate({"top":"-17%"},300);
 				$("ul").children(".selected").removeClass("selected").prev().addClass("selected");
 				$("ul").animate({"right":"-=30%"},300,function(){
-					$("#sectionInfo").children("span").text($(".selected").data("info"));
+					$("#sectionInfo").children("span").html($(".selected").children("input").val());
 					$("#sectionInfo").animate({"top":"0%"},300);
 				});
 			}else{
@@ -57,7 +57,7 @@ Main.keyDown = function()
 				$("#sectionInfo").animate({"top":"-17%"},300);
 				$("ul").children(".selected").removeClass("selected").next().addClass("selected");
 				$("ul").animate({"right":"+=30%"},600,function(){
-					$("#sectionInfo").children("span").text($(".selected").data("info"));
+					$("#sectionInfo").children("span").html($(".selected").children("input").val());
 					$("#sectionInfo").animate({"top":"0%"},300);
 				});
 			}else{

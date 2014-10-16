@@ -168,7 +168,7 @@ button{
 	width:100%;
 	height:100%;
 }
-#aboutContainer span{
+#aboutContainer span,#aboutContainer p{
 	color:white;
 	font-family:Arial;
 }
