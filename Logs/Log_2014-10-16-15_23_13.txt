@@ -56,3 +56,34 @@ ENTER
 Key pressed: 31
 [INFO] window.onFocusin
 [INFO] window.onShow
+Key pressed: 4
+not entred
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+Key pressed: 31
+Key pressed: 45
+Unhandled key
+sendEvent
+pType : 202
+pParam : stat=ok&type=destroy&id=PromoSportSmartTv
+pStatus : 1
+This event is Not Register!!
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 31
+Key pressed: 29443
+Key pressed: 4
+not entred
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+Key pressed: 4
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 0
+Unhandled key
+Key pressed: 29469
+Unhandled key
+Key pressed: 5
