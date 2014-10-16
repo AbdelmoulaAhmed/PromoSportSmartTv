@@ -36,10 +36,30 @@ Main.keyDown = function()
 			widgetAPI.sendReturnEvent();
 			break;
 		case tvKey.KEY_LEFT:
-			alert("LEFT");
+			if($("ul").children(".selected").prev().length!=0)
+			{
+				$("#sectionInfo").animate({"top":"-17%"},300);
+				$("ul").children(".selected").removeClass("selected").prev().addClass("selected");
+				$("ul").animate({"right":"-=30%"},300,function(){
+					$("#sectionInfo").children("span").text($(".selected").data("info"));
+					$("#sectionInfo").animate({"top":"0%"},300);
+				});
+			}else{
+				alert("not entred");
+			}
 			break;
 		case tvKey.KEY_RIGHT:
-			alert("RIGHT");
+			if($("ul").children(".selected").next().length!=0)
+			{
+				$("#sectionInfo").animate({"top":"-17%"},300);
+				$("ul").children(".selected").removeClass("selected").next().addClass("selected");
+				$("ul").animate({"right":"+=30%"},600,function(){
+					$("#sectionInfo").children("span").text($(".selected").data("info"));
+					$("#sectionInfo").animate({"top":"0%"},300);
+				});
+			}else{
+				alert("not entred");
+			}
 			break;
 		case tvKey.KEY_UP:
 			alert("UP");

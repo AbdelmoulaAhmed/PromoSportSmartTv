@@ -5,11 +5,12 @@
 		<title>PromoSportSmartTv</title>
 
 		<!-- TODO : Common API -->
-		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
-		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+		<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+		<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+		<script type="text/javascript" src="$MANAGER_WIDGET/Common/jquery.js"></script>
 
 		<!-- TODO : Javascript code -->
-		<script language="javascript" type="text/javascript" src="app/javascript/Main.js"></script>
+		<script type="text/javascript" src="app/javascript/Main.js"></script>
 
 		<!-- TODO : Style sheets code -->
 		<link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
@@ -22,7 +23,50 @@
 
 		<!-- Dummy anchor as focus for key events -->
 		<a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
-
-		<!-- TODO: your code here -->
+		<div id="sectionInfo">
+			<span>Displays The Gates Of The National And International Competitions, We provide Statistics On Each Game.</span>
+		</div>
+		<div id="container">
+			<ul>
+				<li class="selected" data-info="Displays The Gates Of The National And International Competitions, We provide Statistics On Each Game.">
+					<img src="images/prediction.png"/>
+					<h1>PREDICTION</h1>
+				</li>
+				<li data-info="Shows Places Of Sale Grids Promosport In Tunisia.">
+					<img src="images/outlets.png"/>
+					<h1>OUTLETS</h1>
+				</li>
+				<li data-info="Displays The Results Of The National Grids, International, The Amount Won And The Number Of Winners.">
+					<img src="images/results.png"/>
+					<h1>RESULTS</h1>
+				</li>
+				<li data-info="Proposes How Promosport Enter Contests, Validating Your Participationles, Forecasts And Combination Regulations.">
+					<img src="images/howto.png"/>
+					<h1>HOW TO</h1>
+				</li>
+			</ul>
+		</div>
+		<div id="bottomPanel">
+			<div class="control">
+				<img src="images/Control/RightButton.png"/>
+				<span>: Move Right</span>
+			</div>
+			<div class="control">
+				<img src="images/Control/LeftButton.png"/>
+				<span>: Move Left</span>
+			</div>
+			<div class="control">
+				<img src="images/Control/Focus.png"/>
+				<span>: Enter</span>
+			</div>
+			<div class="control">
+				<img src="images/Control/InfoButton.png"/>
+				<span>: About</span>
+			</div>
+			<div class="control">
+				<img src="images/Control/Exit.png"/>
+				<span>: Exit</span>
+			</div>
+		</div>
 	</body>
 </html>

@@ -1,0 +1,80 @@
+[INFO] window.onPreShow
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 4
+Key pressed: 5
+Key pressed: 4
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+Key pressed: 4
+Key pressed: 4
+Key pressed: 4
+Key pressed: 4
+Key pressed: 4
+Key pressed: 4
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 4
+Key pressed: 4
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 4
+Key pressed: 5
+Key pressed: 5
+Key pressed: 4
+Key pressed: 4
+Key pressed: 4
+Key pressed: 4
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 4
+Key pressed: 4
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 5
+not entred
+Key pressed: 4
+not entred
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 4
+TypeError: '1' is not a function (evaluating '$("ul").children(".selected").next().length()')
+Key pressed: 5
+TypeError: '0' is not a function (evaluating '$("ul").children(".selected").prev().length()')
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 5
+not entred
+Key pressed: 4
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 5
+Key pressed: 4
+Key pressed: 4
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+Key pressed: 4
+Key pressed: 4
