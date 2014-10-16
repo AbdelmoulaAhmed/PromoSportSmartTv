@@ -30,6 +30,9 @@ Main.keyDown = function()
 
 	switch(keyCode)
 	{
+		case tvKey.KEY_INFO:
+			$("#aboutContainer").fadeIn();
+			break;
 		case tvKey.KEY_RETURN:
 		case tvKey.KEY_PANEL_RETURN:
 			alert("RETURN");
@@ -69,7 +72,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_ENTER:
 		case tvKey.KEY_PANEL_ENTER:
-			alert("ENTER");
+			$("#aboutContainer").fadeOut();
 			break;
 		default:
 			alert("Unhandled key");
