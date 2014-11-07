@@ -14,7 +14,8 @@
 
 		<!-- TODO : Style sheets code -->
 		<link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
-
+		<link rel="stylesheet" href="app/stylesheets/aboutPanel.css" />
+		<link rel="stylesheet" href="app/stylesheets/controlPanel.css" />
 		<!-- TODO: Plugins -->
 
 	</head>
@@ -23,6 +24,21 @@
 
 		<!-- Dummy anchor as focus for key events -->
 		<a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
+		<input id="area" type="hidden" value="menu" />
+		<div id="transition"></div>
+		<div id="exit">
+			<div id="exitPanel">
+				<div id="exitTitle">
+					<h3>Exit Application</h3>
+				</div>
+				<div id="exitContainer">
+					<span>You are about to exit the application Continue?</span>
+					<br />
+					<button class="buttonSelected">Cancel</button>
+					<button>Exit</button>
+				</div>
+			</div>
+		</div>
 		<div id="aboutContainer">
 				<h1>About</h1>
 				<h2>Developped By : </h2>
@@ -32,34 +48,30 @@
 				</div>
 				<div class="developper">
 					<img src="images/ahmed.jpg" />
-					<span>AHMED ABDELMOULA</span>
+					<span>AHMED ABD MOULA</span>
 				</div>
-				<h2>Info:</h2>
-				<p>For the mini project cross Platform Samsung Smart TV,
-				 the engineers are created  an application on the famous game of Lottery Tunisian
-				  "PROMOSPORT"</p>
 		</div>
 		<div id="sectionInfo">
 			<span>Displays The Gates Of The National And International Competitions, We provide Statistics On Each Game.</span>
 		</div>
 		<div id="container">
 			<ul>
-				<li class="selected" >
+				<li class="selected">
 					<input type="hidden" value="Displays The Gates Of The National And International Competitions, We provide Statistics On Each Game."/>
 					<img src="images/prediction.png"/>
 					<h1>PREDICTION</h1>
 				</li>
-				<li >
+				<li>
 					<input type="hidden" value="Shows Places Of Sale Grids Promosport In Tunisia."/>
 					<img src="images/outlets.png"/>
 					<h1>OUTLETS</h1>
 				</li>
-				<li >
+				<li>
 					<input type="hidden" value="Displays The Results Of The National Grids, International, The Amount Won And The Number Of Winners."/>
 					<img src="images/results.png"/>
 					<h1>RESULTS</h1>
 				</li>
-				<li >
+				<li>
 					<input type="hidden" value="Proposes How Promosport Enter Contests, Validating Your Participationles, Forecasts And Combination Regulations."/>
 					<img src="images/howto.png"/>
 					<h1>HOW TO</h1>
@@ -68,23 +80,24 @@
 		</div>
 		<div id="bottomPanel">
 			<div class="control">
-				<img src="images/Control/RightButton.png"/>
-				<span>: Move Right</span>
+				<img id="left" src="images/Control/LeftButton.png"/>
+				<img id="right" src="images/Control/RightButton.png"/>
+				<span>: Move </span>
 			</div>
 			<div class="control">
-				<img src="images/Control/LeftButton.png"/>
-				<span>: Move Left</span>
-			</div>
-			<div class="control">
-				<img src="images/Control/Focus.png"/>
+				<img id="enter" src="images/Control/Focus.png"/>
 				<span>: Enter</span>
 			</div>
 			<div class="control">
-				<img src="images/Control/InfoButton.png"/>
+				<img id="about" src="images/Control/InfoButton.png"/>
 				<span>: About</span>
 			</div>
+			<div class="control off">
+				<img id="return" src="images/Control/Return.png"/>
+				<span>: Return</span>
+			</div>
 			<div class="control">
-				<img src="images/Control/Exit.png"/>
+				<img id="Cexit" src="images/Control/Exit.png"/>
 				<span>: Exit</span>
 			</div>
 		</div>

@@ -1,0 +1,123 @@
+[INFO] window.onPreShow
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+ReferenceError: Can't find variable: Main
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 5
+Key pressed: 5
+Key pressed: 4
+Key pressed: 4
+Key pressed: 31
+Key pressed: 88
+sendEvent
+pType : 202
+pParam : stat=ok&type=destroy&id=PromoSportSmartTv
+pStatus : 1
+This event is Not Register!!
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 31
+Key pressed: 88
+Key pressed: 4
+Key pressed: 4
+Key pressed: 4
+Key pressed: 4
+Key pressed: 45
+sendEvent
+pType : 202
+pParam : stat=ok&type=destroy&id=PromoSportSmartTv
+pStatus : 1
+This event is Not Register!!
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 31
+Key pressed: 88
+Key pressed: 31
+Key pressed: 88
+Key pressed: 45
+Key pressed: 4
+Key pressed: 4
+Key pressed: 29443
+Key pressed: 45
+Key pressed: 5
+Key pressed: 4
+Key pressed: 29443
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 5
+Key pressed: 4
+Key pressed: 31
+Key pressed: 88
+Key pressed: 5
+Key pressed: 29443
+ReferenceError: Can't find variable: Main
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 5
+Key pressed: 29443
+ReferenceError: Can't find variable: Main
+sendEvent
+pType : 202
+pParam : stat=ok&type=destroy&id=PromoSportSmartTv
+pStatus : 1
+This event is Not Register!!
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 5
+Key pressed: 29443
+ReferenceError: Can't find variable: Main
+sendEvent
+pType : 202
+pParam : stat=ok&type=destroy&id=PromoSportSmartTv
+pStatus : 1
+This event is Not Register!!
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 5
+Key pressed: 29443
+ReferenceError: Can't find variable: Main
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 5
+Key pressed: 29443
+ReferenceError: Can't find variable: Main
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 31
+Key pressed: 88
+Key pressed: 45
+Key pressed: 29443
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 5
+Key pressed: 29443
+ReferenceError: Can't find variable: Main
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 5
+Key pressed: 29443
+ReferenceError: Can't find variable: Main
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 5
+Key pressed: 29443
+ReferenceError: Can't find variable: Main
