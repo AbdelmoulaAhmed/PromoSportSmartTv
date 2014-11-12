@@ -5,12 +5,12 @@
 	var number = $(".selected").children(".itemNumber").val();
 	var address = $(".selected").children(".itemAddress").val();
 	var city = $(".selected").children(".itemCity").val();
-	$("#outletInfoTable tr:nth-child(1) td:nth-child(3)").html(id);
-	$("#outletInfoTable tr:nth-child(2) td:nth-child(3)").text(zone);
-	$("#outletInfoTable tr:nth-child(3) td:nth-child(3)").html(status);
-	$("#outletInfoTable tr:nth-child(4) td:nth-child(3)").html(number);
-	$("#outletInfoTable tr:nth-child(5) td:nth-child(3)").html(address);
-	$("#outletInfoTable tr:nth-child(6) td:nth-child(3)").html(city);
+	$("#outletInfoTable").children("tr").first().children("td").first().next().next().html(id);
+	$("#outletInfoTable").children("tr").first().next().children("td").first().next().next().html(zone);
+	$("#outletInfoTable").children("tr").first().next().next().children("td").first().next().next().html(status);
+	$("#outletInfoTable").children("tr").first().next().next().next().children("td").first().next().next().html(number);
+	$("#outletInfoTable").children("tr").first().next().next().next().next().children("td").first().next().next().html(address);
+	$("#outletInfoTable").children("tr").first().next().next().next().next().next().children("td").first().next().next().html(city);
 }
 var widgetAPI = new Common.API.Widget();
 var tvKey = new Common.API.TVKeyValue();
@@ -26,8 +26,9 @@ Main.onLoad = function()
 	this.enableKeys();
 	widgetAPI.sendReadyEvent();
 	$(document).ready(function(){
-		$("#transition").stop(true,false).fadeOut(500);
+		$("#transition").fadeOut(500);
 		$("#left").children(".item").first().addClass("selected");
+		alert("here");
 		setOutletData();
 	});
 };

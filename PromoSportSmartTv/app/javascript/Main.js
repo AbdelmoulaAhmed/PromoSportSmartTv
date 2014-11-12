@@ -147,6 +147,9 @@ Main.keyDown = function()
 					if($("ul .selected").children("h1").html()=="RESULTS")
 					{
 						window.location.replace("results.html");
+					}else if($("ul .selected").children("h1").html()=="OUTLETS")
+					{
+						window.location.replace("outlets.html");
 					}
 				});
 			}
