@@ -1,0 +1,54 @@
+[INFO] window.onPreShow
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 4
+Key pressed: 29443
+Key pressed: 88
+Key pressed: 88
+Key pressed: 4
+Key pressed: 4
+Key pressed: 4
+Key pressed: 29461
+DOWN
+Key pressed: 29443
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 29443
+Key pressed: 31
+Key pressed: 88
+Key pressed: 4
+Key pressed: 4
+Key pressed: 4
+Key pressed: 4
+Key pressed: 4
+Key pressed: 29461
+DOWN
+Key pressed: 29461
+DOWN
+Key pressed: 29461
+DOWN
+Key pressed: 29460
+UP
+Key pressed: 45
+Key pressed: 45
+Key pressed: 45
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 29443
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 29443
+Key pressed: 29443
+Key pressed: 31
+Key pressed: 31
+Key pressed: 88
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 5
+Key pressed: 29443

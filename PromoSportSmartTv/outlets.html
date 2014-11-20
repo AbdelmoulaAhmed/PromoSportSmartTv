@@ -12,31 +12,36 @@
 		<link rel="stylesheet" href="app/stylesheets/outlets.css" />
 		<link rel="stylesheet" href="app/stylesheets/aboutPanel.css" />
 		<link rel="stylesheet" href="app/stylesheets/controlPanel.css" />
-		
+		<link rel="stylesheet" href="app/stylesheets/exitPanel.css" />
 	</head>
 	<body onload="Main.onLoad();" onunload="Main.onUnload();">
 		<a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
 		<p id="xmlZone" style="color:black;display:none;"></p>
 		<input id="area" type="hidden" value="menu" />
 		<div id="transition"></div>
+		<div id="exit">
+			<div id="exitPanel">
+				<div id="exitTitle">
+					<h3>Exit Application</h3>
+				</div>
+				<div id="exitContainer">
+					<span>You are about to exit the application Continue?</span>
+					<br />
+					<button class="buttonSelected">Cancel</button>
+					<button>Exit</button>
+				</div>
+			</div>
+		</div>
 		<div id="aboutContainer">
-				<h1>About</h1>
-				<h2>Developped By : </h2>
-				<div class="developper">
-					<img src="images/yahia.png" />
-					<span>YAHIA MGARRECH</span>
-				</div>
-				<div class="developper">
-					<img src="images/ahmed.jpg" />
-					<span>AHMED ABD MOULA</span>
-				</div>
+
 		</div>
 		<div id="container">
 			<div id="in-container">
 				<div id="top">
 					<h2>OUTLETS</h2>
 				</div>
-				<div id="left"><h3>Outlet Adresses</h3><div class="item"><span>&#1578;&#1575;&#1603;&#1587;&#1610;&#1601;&#1608;&#1606; - &#1576;&#1575;&#1576; &#1575;&#1604;&#1580;&#1583;&#1610;&#1583;</span><input class="itemId" type="hidden" value="1"/><input class="itemZone" type="hidden" value="&#1578;&#1608;&#1606;&#1587;, &#1576;&#1575;&#1576;    &#1575;&#1604;&#1580;&#1583;&#1610;&#1583;"/><input class="itemStatus" type="hidden" value="&#1610;&#1593;&#1605;&#1604;"/><input class="itemNumber" type="hidden" value="01/0005"/><input class="itemAddress" type="hidden" value="&#1578;&#1575;&#1603;&#1587;&#1610;&#1601;&#1608;&#1606; - &#1576;&#1575;&#1576; &#1575;&#1604;&#1580;&#1583;&#1610;&#1583;"/><input class="itemCity" type="hidden" value="&#1578;&#1608;&#1606;&#1587;, 01
+				<h3>Outlet Adresses</h3>
+				<div id="left"><div class="item"><span>&#1578;&#1575;&#1603;&#1587;&#1610;&#1601;&#1608;&#1606; - &#1576;&#1575;&#1576; &#1575;&#1604;&#1580;&#1583;&#1610;&#1583;</span><input class="itemId" type="hidden" value="1"/><input class="itemZone" type="hidden" value="&#1578;&#1608;&#1606;&#1587;, &#1576;&#1575;&#1576;    &#1575;&#1604;&#1580;&#1583;&#1610;&#1583;"/><input class="itemStatus" type="hidden" value="&#1610;&#1593;&#1605;&#1604;"/><input class="itemNumber" type="hidden" value="01/0005"/><input class="itemAddress" type="hidden" value="&#1578;&#1575;&#1603;&#1587;&#1610;&#1601;&#1608;&#1606; - &#1576;&#1575;&#1576; &#1575;&#1604;&#1580;&#1583;&#1610;&#1583;"/><input class="itemCity" type="hidden" value="&#1578;&#1608;&#1606;&#1587;, 01
 &#1575;&#1604;&#1578;&#1601;&#1575;&#1589;&#1610;&#1604;"/></div><div class="item"><span>&#1605;&#1602;&#1607;&#1609; &#1575;&#1604;&#1581;&#1589;&#1575;&#1606; &#1575;&#1604;&#1575;&#1576;&#1610;&#1590; 35 &#1588;-&#1575;&#1604;&#1591;&#1610;&#1576; &#1575;&#1604;&#1605;&#1607;&#1610;&#1585;&#1610;-&#1575;&#1604;&#1605;&#1588;&#1578;&#1604;</span><input class="itemId" type="hidden" value="2"/><input class="itemZone" type="hidden" value="&#1578;&#1608;&#1606;&#1587;, &#1575;&#1604;&#1576;&#1604;&#1601;&#1610;&#1583;&#1610;&#1585;"/><input class="itemStatus" type="hidden" value="&#1610;&#1593;&#1605;&#1604;"/><input class="itemNumber" type="hidden" value="01/0007"/><input class="itemAddress" type="hidden" value="&#1605;&#1602;&#1607;&#1609; &#1575;&#1604;&#1581;&#1589;&#1575;&#1606; &#1575;&#1604;&#1575;&#1576;&#1610;&#1590; 35 &#1588;-&#1575;&#1604;&#1591;&#1610;&#1576; &#1575;&#1604;&#1605;&#1607;&#1610;&#1585;&#1610;-&#1575;&#1604;&#1605;&#1588;&#1578;&#1604;"/><input class="itemCity" type="hidden" value="&#1578;&#1608;&#1606;&#1587;, 01
 &#1575;&#1604;&#1578;&#1601;&#1575;&#1589;&#1610;&#1604;"/></div><div class="item"><span>&#1605;&#1602;&#1607;&#1609;    / &#1606;&#1607;&#1580; &#1603;&#1605;&#1575;&#1604; &#1575;&#1578;&#1575;&#1578;&#1610;&#1585;&#1603; &#1593;&#1583;&#1583;48-&#1608;&#1587;&#1591; &#1575;&#1604;&#1593;&#1575;&#1589;&#1605;&#1577;</span><input class="itemId" type="hidden" value="3"/><input class="itemZone" type="hidden" value="&#1578;&#1608;&#1606;&#1587;, &#1578;&#1608;&#1606;&#1587; &#1575;&#1604;&#1605;&#1583;&#1610;&#1606;&#1577;&nbsp;"/><input class="itemStatus" type="hidden" value="&#1610;&#1593;&#1605;&#1604;"/><input class="itemNumber" type="hidden" value="01/0009"/><input class="itemAddress" type="hidden" value="&#1605;&#1602;&#1607;&#1609;    / &#1606;&#1607;&#1580; &#1603;&#1605;&#1575;&#1604; &#1575;&#1578;&#1575;&#1578;&#1610;&#1585;&#1603; &#1593;&#1583;&#1583;48-&#1608;&#1587;&#1591; &#1575;&#1604;&#1593;&#1575;&#1589;&#1605;&#1577;"/><input class="itemCity" type="hidden" value="&#1578;&#1608;&#1606;&#1587;, 01
 &#1575;&#1604;&#1578;&#1601;&#1575;&#1589;&#1610;&#1604;"/></div><div class="item"><span>&#1578;&#1575;&#1603;&#1587;&#1610;&#1601;&#1608;&#1606;/16    &#1606;&#1607;&#1580; &#1601;&#1575;&#1585;&#1587; &#1575;&#1604;&#1582;&#1608;&#1585;&#1610;</span><input class="itemId" type="hidden" value="4"/><input class="itemZone" type="hidden" value="&#1578;&#1608;&#1606;&#1587;, &#1578;&#1608;&#1606;&#1587; &#1575;&#1604;&#1605;&#1583;&#1610;&#1606;&#1577;&nbsp;"/><input class="itemStatus" type="hidden" value="&#1610;&#1593;&#1605;&#1604;"/><input class="itemNumber" type="hidden" value="01/0010"/><input class="itemAddress" type="hidden" value="&#1578;&#1575;&#1603;&#1587;&#1610;&#1601;&#1608;&#1606;/16    &#1606;&#1607;&#1580; &#1601;&#1575;&#1585;&#1587; &#1575;&#1604;&#1582;&#1608;&#1585;&#1610;"/><input class="itemCity" type="hidden" value="&#1578#1578;&#1608;&#1606;&#1587;, 01
@@ -650,7 +655,7 @@
 &#1575;&#1604;&#1578;&#1601;&#1575;&#1589;&#1610;&#1604;"/></div><div class="item"><span>&#1606;&#1607;&#1580; &#1580;&#1605;&#1575;&#1604; &#1575;&#1604;&#1583;&#1610;&#1606; &#1575;&#1604;&#1571;&#1601;&#1594;&#1575;&#1606;&#1610; &#1587;&#1608;&#1587;&#1577;</span><input class="itemId" type="hidden" value="621"/><input class="itemZone" type="hidden" value="&#1587;&#1608;&#1587;&#1577;, &#1587;&#1608;&#1587;&#1577;"/><input class="itemStatus" type="hidden" value="&#1610;&#1593;&#1605;&#1604;"/><input class="itemNumber" type="hidden" value="02/0057"/><input class="itemAddress" type="hidden" value="&#1606;&#1607;&#1580; &#1580;&#1605;&#1575;&#1604; &#1575;&#1604;&#1583;&#1610;&#1606; &#1575;&#1604;&#1571;&#1601;&#1594;&#1575;&#1606;&#1610; &#1587;&#1608;&#1587;&#1577;"/><input class="itemCity" type="hidden" value="&#1587;&#1608;&#1587;&#157#1577;, 02
 &#1575;&#1604;&#1578;&#1601;&#1575;&#1589;&#1610;&#1604;"/></div></div>
 				<div id="right">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6387.031545878194!2d10.190173870532089!3d36.83012179525866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1415131455028" width="100%" height="60%" frameborder="0" style="border:0"></iframe>
+					<!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6387.031545878194!2d10.190173870532089!3d36.83012179525866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1415131455028" width="100%" height="60%" frameborder="0" style="border:0"></iframe>-->
 					<table cellspacing="0" id="outletInfoTable" >
 						<tr>
 							<td>Id</td>
@@ -692,12 +697,12 @@
 				<img id="up" src="images/Control/UpButton.png"/>
 				<span>: Move </span>
 			</div>
-			<div class="control">
+			<div class="control off">
 				<img id="Cleft" src="images/Control/LeftButton.png"/>
 				<img id="Cright" src="images/Control/RightButton.png" />
-				<span>: Menu </span>
+				<span>: Move </span>
 			</div>
-			<div class="control">
+			<div class="control off">
 				<img id="enter" src="images/Control/Focus.png"/>
 				<span>: Enter</span>
 			</div>
@@ -705,12 +710,12 @@
 				<img id="about" src="images/Control/InfoButton.png"/>
 				<span>: About</span>
 			</div>
-			<div class="control off">
+			<div class="control">
 				<img id="return" src="images/Control/Return.png"/>
 				<span>: Return</span>
 			</div>
 			<div class="control">
-				<img id="exit" src="images/Control/Exit.png"/>
+				<img id="Cexit" src="images/Control/Exit.png"/>
 				<span>: Exit</span>
 			</div>
 		</div>

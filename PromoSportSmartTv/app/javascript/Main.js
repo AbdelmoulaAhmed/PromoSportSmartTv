@@ -13,6 +13,18 @@ Main.onLoad = function()
 	widgetAPI.sendReadyEvent();
 	$(document).ready(function(){
 		$("#transition").fadeOut(1000);
+		$.ajax({
+			type: "GET",
+			url: "about.txt",
+			dataType: "text",
+			success: function(text) {
+				$("#aboutContainer").html(text);
+			},
+			error: function(error) {
+				alert("About section could not be processed correctly : ");
+				console.log(error.responseText);
+			}
+		});
 	});
 };
 
@@ -42,13 +54,16 @@ Main.keyDown = function()
 			$("#exit").fadeIn();
 			break;
 		case tvKey.KEY_INFO:
-			$("#return").parent().removeClass("off");
-			$("#Cexit").parent().addClass("off");
-			$("#left").parent().addClass("off");
-			$("#right").parent().addClass("off");
-			$("#enter").parent().addClass("off");
-			$("#about").parent().addClass("off");
-			$("#aboutContainer").fadeIn();
+			if($("#area").val()=="menu")
+			{
+				$("#return").parent().removeClass("off");
+				$("#Cexit").parent().addClass("off");
+				$("#left").parent().addClass("off");
+				$("#right").parent().addClass("off");
+				$("#enter").parent().addClass("off");
+				$("#about").parent().addClass("off");
+				$("#aboutContainer").fadeIn();
+			}
 			break;
 		case tvKey.KEY_RETURN:
 		case tvKey.KEY_PANEL_RETURN:

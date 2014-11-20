@@ -12,22 +12,28 @@
 		<link rel="stylesheet" href="app/stylesheets/results.css" />
 		<link rel="stylesheet" href="app/stylesheets/aboutPanel.css" />
 		<link rel="stylesheet" href="app/stylesheets/controlPanel.css" />
+		<link rel="stylesheet" href="app/stylesheets/exitPanel.css" />
 	</head>
 	<body onload="Main.onLoad();" onunload="Main.onUnload();">
 		<a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
+		
 		<input id="area" type="hidden" value="menu" />
 		<div id="transition"></div>
+		<div id="exit">
+			<div id="exitPanel">
+				<div id="exitTitle">
+					<h3>Exit Application</h3>
+				</div>
+				<div id="exitContainer">
+					<span>You are about to exit the application Continue?</span>
+					<br />
+					<button class="buttonSelected">Cancel</button>
+					<button>Exit</button>
+				</div>
+			</div>
+		</div>
 		<div id="aboutContainer">
-				<h1>About</h1>
-				<h2>Developped By : </h2>
-				<div class="developper">
-					<img src="images/yahia.png" />
-					<span>YAHIA MGARRECH</span>
-				</div>
-				<div class="developper">
-					<img src="images/ahmed.jpg" />
-					<span>AHMED ABD MOULA</span>
-				</div>
+
 		</div>
 		<div id="container">
 			<div id="in-container">
@@ -35,41 +41,30 @@
 					<div class="menuItem">National</div>	
 					<div class="menuItem menuSelected">International</div>	
 				</div>
+				<h3>Prices</h3>
+					<table id="prices">
+						<tr>
+							<td>Premium allocated to the winners</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>Number of winners newsletters</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>Number of winning columns</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>Winner from each column</td>
+							<td>-</td>
+						</tr>
+					</table>
+				<h3>Match List</h3>
 				<div id="left">
-					<h3>Match List</h3>
-					<div class="item selected">
-						<div class="x01 hover"><span>2</span></div>
-						<img src="images/logos/ACMilan.png" />
-						<span>0 - 1</span>
-						<img src="images/logos/FCBarcelona.png" />
-						<input class="" type="hidden" />
-					</div>
-					<div class="item">
-						<div class="x01"><span>x</span></div>
-						<img src="images/logos/ACMilan.png" />
-						<span>1 - 1</span>
-						<img src="images/logos/FCBarcelona.png" />
-					</div>
-					<div class="item">
-						<div class="x01"><span>1</span></div>
-						<img src="images/logos/ACMilan.png" />
-						<span>3 - 0</span>
-						<img src="images/logos/FCBarcelona.png" />
-					</div>
-					<div class="item">
-						<div class="x01"><span>x</span></div>
-						<img src="images/logos/ACMilan.png" />
-						<span>1 - 1</span>
-						<img src="images/logos/FCBarcelona.png" />
-					</div>
-					<div class="item">
-						<div class="x01"><span>x</span></div>
-						<img src="images/logos/ACMilan.png" />
-						<span>1 - 1</span>
-						<img src="images/logos/FCBarcelona.png" />
-					</div>
+					
 				</div>
-				<div id="right">
+				<!--<div id="right">
 					<h3>Match Information</h3>
 					<div id="imgContainer">
 						<div class="imgT1" ><span id="t1name">AC Milan</span></div>
@@ -108,7 +103,7 @@
 						</tr>
 					</table>
 					
-				</div>
+				</div>-->
 			</div>
 		</div>
 		<div id="bottomPanel">
@@ -122,7 +117,7 @@
 				<img id="Cright" src="images/Control/RightButton.png" />
 				<span>: Menu </span>
 			</div>
-			<div class="control">
+			<div class="control off">
 				<img id="enter" src="images/Control/Focus.png"/>
 				<span>: Enter</span>
 			</div>
@@ -130,12 +125,12 @@
 				<img id="about" src="images/Control/InfoButton.png"/>
 				<span>: About</span>
 			</div>
-			<div class="control off">
+			<div class="control">
 				<img id="return" src="images/Control/Return.png"/>
 				<span>: Return</span>
 			</div>
 			<div class="control">
-				<img id="exit" src="images/Control/Exit.png"/>
+				<img id="Cexit" src="images/Control/Exit.png"/>
 				<span>: Exit</span>
 			</div>
 		</div>

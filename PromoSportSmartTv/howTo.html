@@ -1,37 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="utf-8">
-		<title>title</title>
-		<link rel="stylesheet" href="howTo.css">
-		<script src="jquery.js"></script>
-		<script src="howTo.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>PromoSportSmartTv</title>
+		
+		<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+		<script type="text/javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+		<script type="text/javascript" src="$MANAGER_WIDGET/Common/jquery.js"></script>
+		<script src="app/javascript/Main.js"></script>
+		
+		<link rel="stylesheet" href="app/stylesheets/howTo.css" />
+		<link rel="stylesheet" href="app/stylesheets/aboutPanel.css" />
+		<link rel="stylesheet" href="app/stylesheets/controlPanel.css" />
+		<link rel="stylesheet" href="app/stylesheets/exitPanel.css" />
 	</head>
-	<body>
+	<body onload="Main.onLoad();" onunload="Main.onUnload();">
+		<a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
+		
+		<input id="area" type="hidden" value="menu" />
+		<div id="transition"></div>
+		<div id="exit">
+			<div id="exitPanel">
+				<div id="exitTitle">
+					<h3>Exit Application</h3>
+				</div>
+				<div id="exitContainer">
+					<span>You are about to exit the application Continue?</span>
+					<br />
+					<button class="buttonSelected">Cancel</button>
+					<button>Exit</button>
+				</div>
+			</div>
+		</div>
+		<div id="aboutContainer">
+
+		</div>
 		<div id="container">
-			<div id="bloc1">
-				Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+			<div id="in-container">
+				<div id="top">
+					<h3>HOW TO PARTICIPATE IN PROMOSPORT</h3>
+				</div>
+				<div id="right">
+					<div id="innerRight">
+						<h3>1- Remplir le bulletin de jeu par des pronostics simples ou à combinaisons.</h3>
+							<h4 class="classe1" >1.1- Les pronostics simples :</h4>
+								<p class="classe2">Il s’agit de remplir une seule case au niveau de chacune des 13 lignes de la colonne pour exprimer à chaque fois soit la victoire (1), soit la défaite (2) de l’équipe citée en 1ère ligne dans la grille, soit l’égalité entre les deux équipes protagonistes :
+							<h4 class="classe1">1.2 Les pronostics à combinaisons :</h4>
+								<p class="classe2">Lorsqu’il s’avère délicat d’arrêter des pronostics pour l’une ou l’autre équipe ou encore pour maximiser leurs chances de gain et pour prémunir contre des surprises, bon nombre de participants font recours aux jeux à combinaisons doubles ou triples :</p>
+								<h5 class="classe2">1.2.1- Jeu à combinaisons doubles :</h5>
+									<p class="classe3">Il s’agit d’attribuer à certains matchs des pronostics doubles en remplissant deux cases par des coches ou points ronds pour exprimer :</p>
+									<ul class="classe3">
+										<li>Soit La victoire et le nul (1) et (x)</li>
+										<li>Soit La victoire et la défaite (1) et (2)
+										<li>Soit Le nul et la défaite (x) et (2)
+									</ul>
+									<p class="classe3">de l’équipe citée en 1er lieu sur la grille , et bien entendu le nul signifie l’égalité entre les deux équipes.</p>
+							<h4 class="classe1">1-2-2- Jeu à combinaisons triples :</h4>
+								<p class="classe2">Il s’agit d’attribuer à certains matches compris dans la colonne des pronostics triples en remplissant trois cases par des coches ou des points ronds pour pronostiquer en même temps la victoire de l’équipe citée en 1er lieu , le résultat nul entre les deux équipes et enfin la défaite de la 1ère équipe matérialisée par les signes (1) (x) (2).La technique des combinaisons doubles et triples dans une même colonne est au fait une opération arithmétique de probabilités qui tend à réduire un nombre de colonnes, parfois élevé, en une seule colonne comprenant des doubles et des triples à côté des pronostics simples, comme explicité ci-dessous :</p>
+								<p class="classe2">1 Colonne comprenant 4 combinaisons doubles, 5 combinaisons triples et quatre pronostics simples lequel équivaut à un jeu à 3888 colonnes, étant signalé que les combinaisons doubles et triples autorisées dans les 4 colonnes d’un bulletin ne peuvent dépasser un maximum de 4 doubles et 5 triples pour le concours national et 6 doubles et 7 triples pour le concours international avec un minimum de 2 doubles pour les deux concours.</p>
+								<p class="classe2">Tableau de concordance des combinaisons doubles et triples :</p>
+						<h3>2. Comment déterminer le coût de votre participation :</h3>
+							<p class="classe1">Le coût des combinaisons choisies pour votre jeu est le produit du nombre de colonnes multiplié par le prix de chaque colonne arrêté actuellement à 150 millimes, et augmenté d’un montant de 0,250 millimes par bulletin à titre de participation au coût de la maintenance du système informatique.
+								Ainsi, le coût d’une colonne comprenant une combinaison de 5 doubles et 2 triples s’élève à :
+								<br /><br /><b>288 colonnes x 0,150 = 43,200</b>
+								<br /><b>Participation au coût de maintenance + 0,250</b>
+								<br /><b>Total : 43,450</b><br /><br />
+								étant signalé que l’appareil de validation installé dans les locaux du point de vente, détermine automatiquement le prix à payer et l’affiche sur son écran compte tenu des combinaisons contenues sur le bulletin et tel que détaillé sur le tableau de concordance ci-après :
+							</p>
+							<img class="classe1" src="http://localhost/promosportRSS/images/howTo1.jpg" />
+						<h3>3. Validation de votre participation :</h3>
+							<P class="classe1">Votre participation au concours de Promosport ne sera valide qu’après avoir réglé le montant des combinaisons choisis.</p>
+							<p class="classe1">Cette validation est opérée par le responsable du point de vente qui introduit le bulletin dans le terminal de validation et fait imprimer sur le bulletin les références et codes d’identification du bulletin dans le système central :</p>
+							<img class="classe1" src="http://localhost/promosportRSS/images/howTo2.jpg" />
+							<p class="classe1">Bulletin validé :</p>
+							<ol class="classe2">
+								<li>Code région.</li>
+								<li>Code point de vente et rang de valideuse.</li>
+								<li>Numéro séquentiel du concours.</li>
+								<li>Nombre de colonnes jouées.</li>
+								<li>Montant total réglé.</li>
+								<li>Date et heure de la validation du bulletin.</li>
+								<li>Numéro attribué au bulletin sur le système central.</li>
+								<li>Numéro attribué au bulletin sur le système central.</li>
+								<li>Numéro séquentiel du bulletin.</li>
+								<li>Colonne contenant une combinaison de 7D et 1T.</li>
+								<li>Code d’enregistrement crypté.</li>
+								<li>Transcription des combinaisons formant le jeu.</li>
+							</ol>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="bottomPanel">
 			<div class="control">
-				<img src="Control/RightButton.png"/>
-				<span>: Move Right</span>
+				<img id="down" src="images/Control/DownButton.png"/>
+				<img id="up" src="images/Control/UpButton.png"/>
+				<span>: Move </span>
 			</div>
-			<div class="control">
-				<img src="Control/LeftButton.png"/>
-				<span>: Move Left</span>
+			<div class="control off">
+				<img id="Cleft" src="images/Control/LeftButton.png"/>
+				<img id="Cright" src="images/Control/RightButton.png" />
+				<span>: Move </span>
 			</div>
-			<div class="control">
-				<img src="Control/Focus.png"/>
+			<div class="control off">
+				<img id="enter" src="images/Control/Focus.png"/>
 				<span>: Enter</span>
 			</div>
 			<div class="control">
-				<img src="Control/InfoButton.png"/>
+				<img id="about" src="images/Control/InfoButton.png"/>
 				<span>: About</span>
 			</div>
 			<div class="control">
-				<img src="Control/Exit.png"/>
+				<img id="return" src="images/Control/Return.png"/>
+				<span>: Return</span>
+			</div>
+			<div class="control">
+				<img id="Cexit" src="images/Control/Exit.png"/>
 				<span>: Exit</span>
 			</div>
 		</div>

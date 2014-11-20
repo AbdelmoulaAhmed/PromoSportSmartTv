@@ -12,6 +12,15 @@
 	$("#outletInfoTable").children("tr").first().next().next().next().next().children("td").first().next().next().html(address);
 	$("#outletInfoTable").children("tr").first().next().next().next().next().next().children("td").first().next().next().html(city);
 }
+
+function showList(x){
+	$(".item").css("display","none");
+	for(var i=(x-10);i<(x+10);i++)
+	{
+		$(".item").eq(i).css("display","block");
+	}
+}
+
 var widgetAPI = new Common.API.Widget();
 var tvKey = new Common.API.TVKeyValue();
 
@@ -26,10 +35,22 @@ Main.onLoad = function()
 	this.enableKeys();
 	widgetAPI.sendReadyEvent();
 	$(document).ready(function(){
-		$("#transition").fadeOut(500);
+		$.ajax({
+		type: "GET",
+		url: "http://localhost/promosportHTML/about.txt",
+		dataType: "text",
+		success: function(text) {
+			$("#aboutContainer").html(text);
+		},
+		error: function(error) {
+			alert("The about File could not be processed correctly : ");
+			console.log(error.responseText);
+		}
+		});
+		$("#transition").stop(true,false).fadeOut(500);
 		$("#left").children(".item").first().addClass("selected");
-		alert("here");
 		setOutletData();
+		showList(0);
 	});
 };
 
@@ -53,67 +74,82 @@ Main.keyDown = function()
 		case tvKey.KEY_EXIT:
 			event.preventDefault();
 			$("#area").val("exit");
+			$("#up").parent().addClass("off");
+			$("#down").parent().addClass("off");
+			$("#Cleft").parent().removeClass("off");
+			$("#Cright").parent().removeClass("off");
 			$("#return").parent().addClass("off");
 			$("#Cexit").parent().addClass("off");
 			$("#about").parent().addClass("off");
+			$("#enter").parent().removeClass("off");
 			$("#exit").fadeIn();
 			break;
 		case tvKey.KEY_INFO:
-			$("#return").parent().removeClass("off");
-			$("#Cexit").parent().addClass("off");
-			$("#left").parent().addClass("off");
-			$("#right").parent().addClass("off");
-			$("#enter").parent().addClass("off");
+			$("#area").val("about");
+			$("#up").parent().addClass("off");
+			$("#down").parent().addClass("off");
 			$("#about").parent().addClass("off");
+			$("#Cexit").parent().addClass("off");
 			$("#aboutContainer").fadeIn();
 			break;
 		case tvKey.KEY_RETURN:
 		case tvKey.KEY_PANEL_RETURN:
 			event.preventDefault();
-			$("#return").parent().addClass("off");
-			$("#Cexit").parent().removeClass("off");
-			$("#left").parent().removeClass("off");
-			$("#right").parent().removeClass("off");
-			$("#enter").parent().removeClass("off");
-			$("#about").parent().removeClass("off");
-			$("#aboutContainer").fadeOut();
+			if($("#area").val()=="menu")
+			{
+				$("#transition").fadeIn(500,function(){
+					window.location.replace("index.html");
+				});
+			}else if($("#area").val()=="about")
+			{
+				$("#area").val("menu");
+				$("#Cexit").parent().removeClass("off");
+				// $("#Cleft").parent().removeClass("off");
+				// $("#Cright").parent().removeClass("off");
+				$("#up").parent().removeClass("off");
+				$("#down").parent().removeClass("off");
+				// $("#enter").parent().removeClass("off");
+				$("#about").parent().removeClass("off");
+				$("#aboutContainer").fadeOut();
+			}
 			break;
 		case tvKey.KEY_LEFT:
-			if($("#top").children(".menuSelected").index()>0)
+			if($("#exitContainer").children(".buttonSelected").prev("button").length!=0)
 			{
-				$("#top").children(".menuSelected").removeClass("menuSelected").prev().addClass("menuSelected");
+				$("#exitContainer").children(".buttonSelected").removeClass("buttonSelected").prev().addClass("buttonSelected");
 			}else{
-				$("#top").children(".menuSelected").removeClass("menuSelected");
-				$("#top").children(".menuItem").last().addClass("menuSelected");
+				$("#exitContainer").children(".buttonSelected").removeClass("buttonSelected").parent().children("button").last().addClass("buttonSelected");
 			}
 			break;
 		case tvKey.KEY_RIGHT:
-			if($("#top").children(".menuSelected").index()+1<$("#top").children(".menuItem").length)
+			if($("#exitContainer").children(".buttonSelected").next().length!=0)
 			{
-				$("#top").children(".menuSelected").removeClass("menuSelected").next().addClass("menuSelected");
+				$("#exitContainer").children(".buttonSelected").removeClass("buttonSelected").next().addClass("buttonSelected");
 			}else{
-				$("#top").children(".menuSelected").removeClass("menuSelected");
-				$("#top").children(".menuItem").first().addClass("menuSelected");
+				$("#exitContainer").children(".buttonSelected").removeClass("buttonSelected").parent().children("button").first().addClass("buttonSelected");
 			}
 			break;
 		case tvKey.KEY_UP:
-			if($("#left").children(".selected").index()>1)
+			if($("#left").children(".selected").index()>0)
 			{
 				$("#left").children(".selected").removeClass("selected").prev().addClass("selected");
 				setOutletData();
 				var dis = $(".selected").offset().top - $("#left").offset().top;
 				if(dis<0)$(".item").animate({"top":"+="+(-dis)},300);
 				if(dis>400)$(".item").animate({"top":"-="+(dis-400)},300);
-			}else{
+			}
+			else
+			{
 				$("#left").children(".selected").removeClass("selected");
 				$("#left").children(".item").last().addClass("selected");
 				setOutletData();
 				var dis = $(".selected").offset().top - $("#left").offset().top;
-				$(".item").animate({"top":"+="+(dis-650)},300);
+				$(".item").animate({"top":"-="+(dis-1150)},300);
 			}
+			showList($("#left").children(".selected").index());
 			break;
 		case tvKey.KEY_DOWN:
-			if($("#left").children(".selected").index()<$("#left").children(".item").length)
+			if($("#left").children(".selected").index()<$("#left").children(".item").length-1)
 			{
 				$("#left").children(".selected").removeClass("selected").next().addClass("selected");
 				setOutletData();
@@ -126,6 +162,7 @@ Main.keyDown = function()
 				setOutletData();
 				$(".item").animate({"top":"0"},300);
 			}
+			showList($("#left").children(".selected").index());
 			break;
 		case tvKey.KEY_ENTER:
 		case tvKey.KEY_PANEL_ENTER:
@@ -137,16 +174,14 @@ Main.keyDown = function()
 					$("#exit").fadeOut();
 					$("#Cexit").parent().removeClass("off");
 					$("#about").parent().removeClass("off");
+					$("#Cleft").parent().addClass("off");
+					$("#Cright").parent().addClass("off");
+					$("#up").parent().removeClass("off");
+					$("#down").parent().removeClass("off");
+					$("#enter").parent().addClass("off");
+					$("#return").parent().removeClass("off");
 				}
 				else alert("exit");
-			}else if($("#area").val()=="menu")
-			{
-				$("#transition").fadeIn(500,function(){
-					if($("ul .selected").children("h1").html()=="RESULTS")
-					{
-						window.location.replace("results.html");
-					}
-				});
 			}
 			break;
 		default:
