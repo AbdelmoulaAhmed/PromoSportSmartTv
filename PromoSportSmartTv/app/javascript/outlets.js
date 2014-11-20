@@ -5,12 +5,12 @@
 	var number = $(".selected").children(".itemNumber").val();
 	var address = $(".selected").children(".itemAddress").val();
 	var city = $(".selected").children(".itemCity").val();
-	$("#outletInfoTable").children("tr").first().children("td").first().next().next().html(id);
-	$("#outletInfoTable").children("tr").first().next().children("td").first().next().next().html(zone);
-	$("#outletInfoTable").children("tr").first().next().next().children("td").first().next().next().html(status);
-	$("#outletInfoTable").children("tr").first().next().next().next().children("td").first().next().next().html(number);
-	$("#outletInfoTable").children("tr").first().next().next().next().next().children("td").first().next().next().html(address);
-	$("#outletInfoTable").children("tr").first().next().next().next().next().next().children("td").first().next().next().html(city);
+	$("#idElement").html(id);
+	$("#zoneElement").html(zone);
+	$("#statusElemet").html(status);
+	$("#numberElement").html(number);
+	$("#addressElement").html(address);
+	$("#cityElement").html(city);
 }
 
 function showList(x){

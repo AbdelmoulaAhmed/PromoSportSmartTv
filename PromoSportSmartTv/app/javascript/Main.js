@@ -155,17 +155,11 @@ Main.keyDown = function()
 					$("#Cexit").parent().removeClass("off");
 					$("#about").parent().removeClass("off");
 				}
-				else widgetAPI.sendExitEvent();
+				else alert("exit");
 			}else if($("#area").val()=="menu")
 			{
 				$("#transition").fadeIn(500,function(){
-					if($("ul .selected").children("h1").html()=="RESULTS")
-					{
-						window.location.replace("results.html");
-					}else if($("ul .selected").children("h1").html()=="OUTLETS")
-					{
-						window.location.replace("outlets.html");
-					}
+					window.location.replace($("ul .selected").children("h1").html().toLowerCase()+".html");
 				});
 			}
 			break;
