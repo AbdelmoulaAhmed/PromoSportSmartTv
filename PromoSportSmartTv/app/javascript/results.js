@@ -11,10 +11,27 @@ function putPrices(type,prices)
 }
 var widgetAPI = new Common.API.Widget();
 var tvKey = new Common.API.TVKeyValue();
-
+var link = "192.168.56.1";
 var Main =
 {
 
+};
+var 
+nationalXML,
+internationalXML="",
+prices = {
+	"national":{
+		"Premium":"",
+		"Wnewsletters":"",
+		"Wcolumns":"",
+		"Weach":""
+	},
+	"international":{
+		"Premium":"",
+		"Wnewsletters":"",
+		"Wcolumns":"",
+		"Weach":""
+	}
 };
 
 Main.onLoad = function()
@@ -22,27 +39,11 @@ Main.onLoad = function()
 	// Enable key event processing
 	this.enableKeys();
 	widgetAPI.sendReadyEvent();
-	$(document).ready(function(){
-		var 
-		nationalXML,
-		internationalXML="",
-		prices = {
-			"national":{
-				"Premium":"",
-				"Wnewsletters":"",
-				"Wcolumns":"",
-				"Weach":""
-			},
-			"international":{
-				"Premium":"",
-				"Wnewsletters":"",
-				"Wcolumns":"",
-				"Weach":""
-			}
-		};
+	$("#transition").fadeOut(500);
+	//$(document).ready(function(){
 		$.ajax({
 			type: "GET",
-			url: "http://localhost/promosportHTML/about.txt",
+			url: "http://"+link+"/promosportHTML/about.txt",
 			dataType: "text",
 			success: function(text) {
 				$("#aboutContainer").html(text);
@@ -54,7 +55,7 @@ Main.onLoad = function()
 		});
 		$.ajax({
 			type: "GET",
-			url: "http://localhost/PromoSportRSS/XML/prices.xml",
+			url: "http://"+link+"/PromoSportRSS/XML/prices.xml",
 			dataType: "xml",
 			success: function(xml) {
 				$(xml).find('national').each(function(){
@@ -79,7 +80,7 @@ Main.onLoad = function()
 		});
 		$.ajax({
 			type: "GET",
-			url: "http://localhost/PromoSportRSS/XML/resultatInternational.xml",
+			url: "http://"+link+"/PromoSportRSS/XML/resultatInternational.xml",
 			dataType: "xml",
 			success: function(xml) {
 				$(xml).find('result').each(function(){
@@ -106,9 +107,10 @@ Main.onLoad = function()
 		});
 		$.ajax({
 			type: "GET",
-			url: "http://localhost/PromoSportRSS/XML/resultatNational.xml",
+			url: "http://"+link+"/PromoSportRSS/XML/resultatNational.xml",
 			dataType: "xml",
 			success: function(xml) {
+				alert("national results has been parsed.");
 				nationalXML ="";
 				$(xml).find('result').each(function(){
 					//var number=$(this).find('number').text();
@@ -130,8 +132,8 @@ Main.onLoad = function()
 				console.log(error.responseText);
 			}
 		});
-		$("#transition").stop(true,false).fadeOut(500);
-	});
+		
+	//});
 };
 
 Main.onUnload = function()
@@ -147,7 +149,7 @@ Main.enableKeys = function()
 Main.keyDown = function()
 {
 	var keyCode = event.keyCode;
-	alert("Key pressed: " + keyCode);
+	//alert("Key pressed: " + keyCode);
 
 	switch(keyCode)
 	{
@@ -267,7 +269,7 @@ Main.keyDown = function()
 				var dis = $(".selected").offset().top - $("#left").offset().top;
 				$("#left").children(".selected").children(".x01").removeClass("hover").parent().removeClass("selected");
 				$("#left").children(".item").last().addClass("selected").children(".x01").addClass("hover");
-				$(".item").animate({"top":"+="+(dis-650)},300);
+				$(".item").animate({"top":"+="+(dis-800)},300);
 			}
 			break;
 		case tvKey.KEY_DOWN:
@@ -298,7 +300,7 @@ Main.keyDown = function()
 					$("#up").parent().removeClass("off");
 					$("#down").parent().removeClass("off");
 				}
-				else alert("exit");
+				else widgetAPI.sendExitEvent();
 			}
 			break;
 		default:

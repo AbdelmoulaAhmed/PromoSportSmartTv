@@ -1,6 +1,6 @@
 var widgetAPI = new Common.API.Widget();
 var tvKey = new Common.API.TVKeyValue();
-
+var link = "192.168.56.1";
 var Main =
 {
 
@@ -11,11 +11,11 @@ Main.onLoad = function()
 	// Enable key event processing
 	this.enableKeys();
 	widgetAPI.sendReadyEvent();
-	$(document).ready(function(){
-		$("#transition").stop(true,false).fadeOut(500);
+	//$(document).ready(function(){
+		$("#transition").fadeOut(500);
 		$.ajax({
 			type: "GET",
-			url: "http://localhost/promosportHTML/about.txt",
+			url: "http://"+link+"/promosportHTML/about.txt",
 			dataType: "text",
 			success: function(text) {
 				$("#aboutContainer").html(text);
@@ -25,7 +25,7 @@ Main.onLoad = function()
 				console.log(error.responseText);
 			}
 		});
-	});
+	//});
 };
 
 Main.onUnload = function()
@@ -41,7 +41,7 @@ Main.enableKeys = function()
 Main.keyDown = function()
 {
 	var keyCode = event.keyCode;
-	alert("Key pressed: " + keyCode);
+	//alert("Key pressed: " + keyCode);
 
 	switch(keyCode)
 	{
@@ -112,7 +112,7 @@ Main.keyDown = function()
 			var childOffset = {
 				top: childPos.top - parentPos.top,
 				left: childPos.left - parentPos.left
-			}
+			};
 			if(childOffset.top<0)
 			$("#innerRight").animate({"top":"+=300px"},10);
 			else $("#innerRight").animate({"top":"0px"},10);
@@ -123,7 +123,7 @@ Main.keyDown = function()
 			var childOffset = {
 				top: childPos.top - parentPos.top,
 				left: childPos.left - parentPos.left
-			}
+			};
 			console.log(childOffset.top);
 			if(childOffset.top>-1534)
 			$("#innerRight").animate({"top":"-=300px"},10);
@@ -145,7 +145,7 @@ Main.keyDown = function()
 					$("#down").parent().removeClass("off");
 					$("#enter").parent().addClass("off");
 				}
-				else alert("exit");
+				else widgetAPI.sendExitEvent();
 			}
 			break;
 		default:

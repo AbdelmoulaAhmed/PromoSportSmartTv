@@ -55,7 +55,7 @@ h3{
 	width:100%;
 	margin:auto;
 	height: 10%;
-	margin-bottom: 4%;
+	margin-bottom: 1%;
 	background-color:rgb(56, 56, 56);
 }
 .menuItem{
@@ -70,14 +70,26 @@ h3{
 	font-weight:bold;
 	background-color:rgb(187, 187, 187);
 }
+#prices{
+	width: 99%;
+	background-color: rgb(56, 56, 56);
+	font-size: 12px;
+	padding: 1%;
+	margin-bottom: 2%;
+}
+#prices tr td:first-child{
+	width:30%;
+}
+
 #left{
 	display:inline-block;
 	vertical-align:top;
 	height:85%;
-	width:35%;
-	overflow:visible;
+	width:100%;
+	overflow:hidden;
 }
 .item{
+	position:relative;
 	background-color:#333333;
 	width:99%;
 	height:16%;
@@ -90,16 +102,15 @@ h3{
 	box-shadow: 1px 1px 10px white;
 }
 .item img{
-	width:15%;
+	width:35%;
 	height:80%;
 	vertical-align:middle;
 	margin-top:2.5%;
 }
 .item span{
-	vertical-align:middle;
-	font-size:30px;
-	font-weight:bold;
-	margin:0 5%;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 4.5;
 }
 .x01{
 	width:10%;

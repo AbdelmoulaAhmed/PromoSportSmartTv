@@ -1,0 +1,34 @@
+[INFO] window.onPreShow
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onShow
+Key pressed: 29443
+national results has been parsed.
+ReferenceError: Can't find variable: nationalXML
+ReferenceError: Can't find variable: internationalXML
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 29443
+national results has been parsed.
+ReferenceError: Can't find variable: nationalXML
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onShow
+Key pressed: 29443
+national results has been parsed.
+ReferenceError: Can't find variable: nationalXML
+up here by yaya
+up here by yaya
+up here by yaya
+up here by yaya
+up here by yaya
+up here by yaya
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onShow
+Key pressed: 29443
+national results has been parsed.
+up here by yaya

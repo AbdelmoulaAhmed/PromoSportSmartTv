@@ -23,7 +23,7 @@ function showList(x){
 
 var widgetAPI = new Common.API.Widget();
 var tvKey = new Common.API.TVKeyValue();
-
+var link = "192.168.56.1";
 var Main =
 {
 
@@ -34,10 +34,10 @@ Main.onLoad = function()
 	// Enable key event processing
 	this.enableKeys();
 	widgetAPI.sendReadyEvent();
-	$(document).ready(function(){
+	//$(document).ready(function(){
 		$.ajax({
 		type: "GET",
-		url: "http://localhost/promosportHTML/about.txt",
+		url: "http://"+link+"/promosportHTML/about.txt",
 		dataType: "text",
 		success: function(text) {
 			$("#aboutContainer").html(text);
@@ -51,7 +51,7 @@ Main.onLoad = function()
 		$("#left").children(".item").first().addClass("selected");
 		setOutletData();
 		showList(0);
-	});
+	//});
 };
 
 Main.onUnload = function()
@@ -67,7 +67,7 @@ Main.enableKeys = function()
 Main.keyDown = function()
 {
 	var keyCode = event.keyCode;
-	alert("Key pressed: " + keyCode);
+	//alert("Key pressed: " + keyCode);
 
 	switch(keyCode)
 	{
@@ -181,7 +181,7 @@ Main.keyDown = function()
 					$("#enter").parent().addClass("off");
 					$("#return").parent().removeClass("off");
 				}
-				else alert("exit");
+				else widgetAPI.sendExitEvent();
 			}
 			break;
 		default:

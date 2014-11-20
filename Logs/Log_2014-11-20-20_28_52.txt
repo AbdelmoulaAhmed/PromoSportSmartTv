@@ -5,11 +5,6 @@
 [INFO] window.onFocusin
 [INFO] window.onShow
 [INFO] window.onShow
-Key pressed: 5
-Key pressed: 5
-Key pressed: 5
-Key pressed: 5
-Key pressed: 5
-Key pressed: 31
-Key pressed: 88
-Key pressed: 5
+Key pressed: 29443
+national results has been parsed.
+Unhandled key

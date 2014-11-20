@@ -1,0 +1,14 @@
+[INFO] window.onPreShow
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onShow
+national results has been parsed.
+exit
+exit
+exit
+[INFO] window.onFocusin
+[INFO] window.onShow
+Unhandled key

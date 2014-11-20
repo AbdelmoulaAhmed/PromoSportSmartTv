@@ -1,4 +1,4 @@
-unction fillIn(league,matchs)
+function fillIn(league,matchs)
 {
 	var header = "<tr><td>Home</td><td>Away</td><td>1</td><td>X</td><td>2</td></tr>";
 	var contentHTML =header;
@@ -19,39 +19,39 @@ unction fillIn(league,matchs)
 }
 var widgetAPI = new Common.API.Widget();
 var tvKey = new Common.API.TVKeyValue();
-
+var link = "192.168.56.1";
 var Main =
 {
 
 };
+var predictionXML="";
+var match,matchs = [];
 
 Main.onLoad = function()
 {
 	// Enable key event processing
 	this.enableKeys();
 	widgetAPI.sendReadyEvent();
-	$(document).ready(function(){
+	//$(document).ready(function(){
 		$("#transition").fadeOut(500);
-	var predictionXML="";
-	var match,matchs = [];
 	$.ajax({
 		type: "GET",
-		url: "http://localhost/promosportHTML/about.txt",
+		url: "http://"+link+"/promosportHTML/about.txt",
 		dataType: "text",
 		success: function(text) {
 			$("#aboutContainer").html(text);
 		},
 		error: function(error) {
 			alert("The about File could not be processed correctly : ");
-			console.log(error.responseText);
+			//console.log(error.responseText);
 		}
 	});
 	$.ajax({
 		type: "GET",
-		url: "http://localhost/PromoSportRSS/XML/prediction.xml",
+		url: "http://"+link+"/PromoSportRSS/XML/prediction.xml",
 		dataType: "xml",
 		success: function(xml) {
-			console.log("parsing done.");
+			alert("prediction parsing done.");
 			$(xml).find('league').each(function(){
 				$(this).find('Match').each(function(){
 					match = {};
@@ -69,10 +69,10 @@ Main.onLoad = function()
 		},
 		error: function(error) {
 			alert("The XML File could not be processed correctly : ");
-			console.log(error.responseText);
+			//console.log(error.responseText);
 		}
 	});
-	});
+	//});
 };
 
 Main.onUnload = function()
@@ -211,7 +211,7 @@ Main.keyDown = function()
 					$("#return").parent().removeClass("off");
 					$("#enter").parent().addClass("off");
 				}
-				else alert("exit");
+				else widgetAPI.sendExitEvent();
 			}
 			break;
 		default:

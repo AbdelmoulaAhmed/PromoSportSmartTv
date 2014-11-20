@@ -1,0 +1,73 @@
+/** Exit panel **/
+#exit{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:95%;
+	background-color:rgba(0,0,0,0.8);
+	z-index:999;
+	display:none;
+}
+
+#exitPanel{
+	width:60%;
+	height:30%;
+	margin:20% auto;
+	background-color:red;
+	border-radius:5px;
+}
+
+#exitTitle{
+	width:100%;
+	height:30%;
+	background-color:green;
+	border-radius:5px 5px 0px 0px;
+	background-color:#131313;
+	border-bottom:solid 1px black;
+}
+
+#exitTitle h3{
+	color: white;
+	line-height: 2.5;
+	margin-left: 2%;	
+}
+
+#exitContainer{
+	width:100%;
+	height:70%;
+	background-color:#202020;
+	border-radius:0px 0px 5px 5px;
+	border-top:solid 1px rgb(53, 53, 53);
+	text-align:center;
+}
+
+#exitContainer span{
+	color: white;
+	font-size: 20px;
+	margin-top: 3%;
+	display: inline-block;
+}
+
+#exitContainer button{
+	width: 28%;
+	height: 34%;
+	margin-top: 2%;
+	color:white;
+	font-size: 16px;
+	background: rgb(79,79,79); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(79,79,79,1) 1%, rgba(45,45,45,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(79,79,79,1)), color-stop(100%,rgba(45,45,45,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(79,79,79,1) 1%,rgba(45,45,45,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(79,79,79,1) 1%,rgba(45,45,45,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(79,79,79,1) 1%,rgba(45,45,45,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(79,79,79,1) 1%,rgba(45,45,45,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f4f4f', endColorstr='#2d2d2d',GradientType=0 ); /* IE6-9 */
+	border:0;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px rgb(31, 30, 30);
+}
+
+.buttonSelected{
+	border:solid 1px white !important;
+}

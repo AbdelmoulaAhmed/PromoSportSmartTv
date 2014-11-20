@@ -1,0 +1,26 @@
+[INFO] window.onPreShow
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onShow
+national results has been parsed.
+sendEvent
+pType : 202
+pParam : stat=ok&type=destroy&id=PromoSportSmartTv
+pStatus : 1
+This event is Not Register!!
+[INFO] window.onFocusin
+[INFO] window.onShow
+national results has been parsed.
+national results has been parsed.
+sendEvent
+pType : 202
+pParam : stat=ok&type=destroy&id=PromoSportSmartTv
+pStatus : 1
+This event is Not Register!!
+[INFO] window.onFocusin
+[INFO] window.onShow
+national results has been parsed.
+Unhandled key

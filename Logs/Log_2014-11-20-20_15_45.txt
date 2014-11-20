@@ -1,0 +1,32 @@
+[INFO] window.onPreShow
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onShow
+Key pressed: 29443
+national results has been parsed.
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 29443
+national results has been parsed.
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onShow
+Key pressed: 29443
+national results has been parsed.
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 29443
+national results has been parsed.
+[INFO] window.onFocusin
+[INFO] window.onShow
+Key pressed: 29443
+national results has been parsed.
+[INFO] window.onFocusin
+[INFO] window.onShow
+[INFO] window.onShow
+Key pressed: 29443
+national results has been parsed.
+Unhandled key

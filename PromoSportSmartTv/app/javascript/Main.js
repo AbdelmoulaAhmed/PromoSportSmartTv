@@ -11,7 +11,7 @@ Main.onLoad = function()
 	// Enable key event processing
 	this.enableKeys();
 	widgetAPI.sendReadyEvent();
-	$(document).ready(function(){
+	//$(document).ready(function(){
 		$("#transition").fadeOut(1000);
 		$.ajax({
 			type: "GET",
@@ -25,7 +25,7 @@ Main.onLoad = function()
 				console.log(error.responseText);
 			}
 		});
-	});
+	//});
 };
 
 Main.onUnload = function()
@@ -41,7 +41,7 @@ Main.enableKeys = function()
 Main.keyDown = function()
 {
 	var keyCode = event.keyCode;
-	alert("Key pressed: " + keyCode);
+	//alert("Key pressed: " + keyCode);
 
 	switch(keyCode)
 	{
@@ -139,10 +139,10 @@ Main.keyDown = function()
 			}
 			break;
 		case tvKey.KEY_UP:
-			alert("UP");
+			//alert("UP");
 			break;
 		case tvKey.KEY_DOWN:
-			alert("DOWN");
+			//alert("DOWN");
 			break;
 		case tvKey.KEY_ENTER:
 		case tvKey.KEY_PANEL_ENTER:
@@ -155,7 +155,7 @@ Main.keyDown = function()
 					$("#Cexit").parent().removeClass("off");
 					$("#about").parent().removeClass("off");
 				}
-				else alert("exit");
+				else widgetAPI.sendExitEvent();
 			}else if($("#area").val()=="menu")
 			{
 				$("#transition").fadeIn(500,function(){
