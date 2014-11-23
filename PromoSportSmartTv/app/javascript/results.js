@@ -218,7 +218,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_LEFT:
 			/* *****Sonud Effect*** */
-			sound("./sound/MoveTone.mp3");
+			sound("./sound/PopTone.mp3");
 	        /* ***** End Sonud Effect*** */
 			if($("#area").val()=="menu")
 			{
@@ -252,7 +252,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_RIGHT:
 			/* *****Sonud Effect*** */
-			sound("./sound/MoveTone.mp3");
+			sound("./sound/PopTone.mp3");
 	        /* ***** End Sonud Effect*** */
 			if($("#area").val()=="menu")
 			{
@@ -286,7 +286,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_UP:
 			/* *****Sonud Effect*** */
-			sound("./sound/MoveTone.mp3");
+			sound("./sound/PopTone.mp3");
 	        /* ***** End Sonud Effect*** */
 			if($("#left").children(".selected").index()>1)
 			{
@@ -303,7 +303,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_DOWN:
 			/* *****Sonud Effect*** */
-			sound("./sound/MoveTone.mp3");
+			sound("./sound/PopTone.mp3");
 	        /* ***** End Sonud Effect*** */
 			//console.log($("#left").children(".selected").index(),$("#left").children(".item").length);
 			if($("#left").children(".selected").index()<$("#left").children(".item").length-1)

@@ -134,7 +134,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_LEFT:
 			/* *****Sonud Effect*** */
-			sound("./sound/MoveTone.mp3");
+			sound("./sound/PopTone.mp3");
 	        /* ***** End Sonud Effect*** */
 			if($("#exitContainer").children(".buttonSelected").prev("button").length!=0)
 			{
@@ -145,7 +145,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_RIGHT:
 			/* *****Sonud Effect*** */
-			sound("./sound/MoveTone.mp3");
+			sound("./sound/PopTone.mp3");
 	        /* ***** End Sonud Effect*** */
 			if($("#exitContainer").children(".buttonSelected").next().length!=0)
 			{
@@ -156,7 +156,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_UP:
 			/* *****Sonud Effect*** */
-			sound("./sound/MoveTone.mp3");
+			sound("./sound/PopTone.mp3");
 	        /* ***** End Sonud Effect*** */
 			if($("#left").children(".selected").index()>0)
 			{
@@ -178,7 +178,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_DOWN:
 			/* *****Sonud Effect*** */
-			sound("./sound/MoveTone.mp3");
+			sound("./sound/PopTone.mp3");
 	        /* ***** End Sonud Effect*** */
 			if($("#left").children(".selected").index()<$("#left").children(".item").length-1)
 			{

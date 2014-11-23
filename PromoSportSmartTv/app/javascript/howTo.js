@@ -130,7 +130,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_UP:
 			/* *****Sonud Effect*** */
-			sound("./sound/MoveTone.mp3");
+			sound("./sound/PopTone.mp3");
 	        /* ***** End Sonud Effect*** */
 			var childPos = $("#innerRight").offset();
 			var parentPos = $("#innerRight").parent().offset();
@@ -144,7 +144,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_DOWN:
 			/* *****Sonud Effect*** */
-			sound("./sound/MoveTone.mp3");
+			sound("./sound/PopTone.mp3");
 	        /* ***** End Sonud Effect*** */
 			var childPos = $("#innerRight").offset();
 			var parentPos = $("#innerRight").parent().offset();
