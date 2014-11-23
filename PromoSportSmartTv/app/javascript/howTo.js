@@ -1,6 +1,15 @@
+function sound(Sound) {
+	var audioElement = document.createElement('audio');
+	audioElement.setAttribute('src', Sound);
+	audioElement.setAttribute('autoplay', 'autoplay');
+    audioElement.addEventListener("load", function() {
+        audioElement.play();
+    }, true);
+}
 var widgetAPI = new Common.API.Widget();
 var tvKey = new Common.API.TVKeyValue();
 var link = "192.168.56.1";
+
 var Main =
 {
 
@@ -46,6 +55,9 @@ Main.keyDown = function()
 	switch(keyCode)
 	{
 		case tvKey.KEY_EXIT:
+			/* *****Sonud Effect*** */
+			sound("./sound/ExitTone.mp3");
+	        /* ***** End Sonud Effect*** */
 			event.preventDefault();
 			$("#area").val("exit");
 			$("#return").parent().addClass("off");
@@ -59,6 +71,9 @@ Main.keyDown = function()
 			$("#exit").fadeIn();
 			break;
 		case tvKey.KEY_INFO:
+			/* *****Sonud Effect*** */
+			sound("./sound/InfoTone.mp3");
+	        /* ***** End Sonud Effect*** */
 			$("#area").val("about");
 			$("#up").parent().addClass("off");
 			$("#down").parent().addClass("off");
@@ -83,8 +98,12 @@ Main.keyDown = function()
 				$("#about").parent().removeClass("off");
 				$("#aboutContainer").fadeOut();
 			}
+
 			break;
 		case tvKey.KEY_LEFT:
+			/* *****Sonud Effect*** */
+			sound("./sound/ErrorTone.mp3");
+	        /* ***** End Sonud Effect*** */
 			if($("#area").val()=="exit")
 			{
 				if($("#exitContainer").children(".buttonSelected").prev("button").length!=0)
@@ -96,6 +115,9 @@ Main.keyDown = function()
 			}
 			break;
 		case tvKey.KEY_RIGHT:
+			/* *****Sonud Effect*** */
+			sound("./sound/ErrorTone.mp3");
+	        /* ***** End Sonud Effect*** */
 			if($("#area").val()=="exit")
 			{
 				if($("#exitContainer").children(".buttonSelected").next().length!=0)
@@ -107,6 +129,9 @@ Main.keyDown = function()
 			}
 			break;
 		case tvKey.KEY_UP:
+			/* *****Sonud Effect*** */
+			sound("./sound/MoveTone.mp3");
+	        /* ***** End Sonud Effect*** */
 			var childPos = $("#innerRight").offset();
 			var parentPos = $("#innerRight").parent().offset();
 			var childOffset = {
@@ -118,6 +143,9 @@ Main.keyDown = function()
 			else $("#innerRight").animate({"top":"0px"},10);
 			break;
 		case tvKey.KEY_DOWN:
+			/* *****Sonud Effect*** */
+			sound("./sound/MoveTone.mp3");
+	        /* ***** End Sonud Effect*** */
 			var childPos = $("#innerRight").offset();
 			var parentPos = $("#innerRight").parent().offset();
 			var childOffset = {
@@ -150,6 +178,9 @@ Main.keyDown = function()
 			break;
 		default:
 			alert("Unhandled key");
+		/* *****Sonud Effect*** */
+		sound("./sound/ErrorTone.mp3");
+        /* ***** End Sonud Effect*** */
 			break;
 	}
 };

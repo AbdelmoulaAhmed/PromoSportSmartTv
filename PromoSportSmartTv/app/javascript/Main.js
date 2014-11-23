@@ -1,6 +1,14 @@
+function sound(Sound) {
+	var audioElement = document.createElement('audio');
+	audioElement.setAttribute('src', Sound);
+	audioElement.setAttribute('autoplay', 'autoplay');
+    audioElement.addEventListener("load", function() {
+        audioElement.play();
+    }, true);
+}
 var widgetAPI = new Common.API.Widget();
 var tvKey = new Common.API.TVKeyValue();
-
+var link="192.168.56.1";
 var Main =
 {
 
@@ -46,6 +54,10 @@ Main.keyDown = function()
 	switch(keyCode)
 	{
 		case tvKey.KEY_EXIT:
+
+			/* *****Sonud Effect*** */
+			sound("./sound/ExitTone.mp3");
+	        /* ***** End Sonud Effect*** */
 			event.preventDefault();
 			$("#area").val("exit");
 			$("#return").parent().addClass("off");
@@ -54,8 +66,16 @@ Main.keyDown = function()
 			$("#exit").fadeIn();
 			break;
 		case tvKey.KEY_INFO:
+
+			var audioElement = document.createElement('audio');
+			audioElement.setAttribute('src', './sound/InfoTone.mp3');
+			audioElement.setAttribute('autoplay', 'autoplay');
+		    audioElement.addEventListener("load", function() {
+		        audioElement.play();
+		    }, true);
 			if($("#area").val()=="menu")
-			{
+			{				
+		        audioElement.play();
 				$("#return").parent().removeClass("off");
 				$("#Cexit").parent().addClass("off");
 				$("#left").parent().addClass("off");
@@ -67,7 +87,13 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_RETURN:
 		case tvKey.KEY_PANEL_RETURN:
+			
 			event.preventDefault();
+			
+			/* *****Sonud Effect*** */
+			sound("./sound/MoveTone.mp3");
+	        /* ***** End Sonud Effect*** */
+			
 			$("#return").parent().addClass("off");
 			$("#Cexit").parent().removeClass("off");
 			$("#left").parent().removeClass("off");
@@ -77,6 +103,10 @@ Main.keyDown = function()
 			$("#aboutContainer").fadeOut();
 			break;
 		case tvKey.KEY_LEFT:
+			/* *****Sonud Effect*** */
+			sound("./sound/MoveTone.mp3");
+	        /* ***** End Sonud Effect*** */
+	        
 			if($("#area").val()=="menu")
 			{
 				if($("ul").children(".selected").prev().length!=0)
@@ -87,6 +117,7 @@ Main.keyDown = function()
 						$("#sectionInfo").children("span").html($(".selected").children("input").val());
 						$("#sectionInfo").animate({"top":"0%"},300);
 					});
+
 				}
 				else
 				{
@@ -108,6 +139,10 @@ Main.keyDown = function()
 			}
 			break;
 		case tvKey.KEY_RIGHT:
+			/* *****Sonud Effect*** */
+			sound("./sound/MoveTone.mp3");
+	        /* ***** End Sonud Effect*** */
+	        
 			if($("#area").val()=="menu")
 			{
 				if($("ul").children(".selected").next().length!=0)
@@ -118,6 +153,7 @@ Main.keyDown = function()
 						$("#sectionInfo").children("span").html($(".selected").children("input").val());
 						$("#sectionInfo").animate({"top":"0%"},300);
 					});
+					
 				}
 				else
 				{
@@ -140,16 +176,23 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_UP:
 			//alert("UP");
+			/* *****Sonud Effect*** */
+			sound("./sound/ErrorTone.mp3");
+	        /* ***** End Sonud Effect*** */
 			break;
 		case tvKey.KEY_DOWN:
 			//alert("DOWN");
+			/* *****Sonud Effect*** */
+			sound("./sound/ErrorTone.mp3");
+	        /* ***** End Sonud Effect*** */
 			break;
 		case tvKey.KEY_ENTER:
 		case tvKey.KEY_PANEL_ENTER:
+	        
 			if($("#area").val()=="exit")
 			{
 				if($(".buttonSelected").html()=="Cancel")
-				{
+				{				
 					$("#area").val("menu");
 					$("#exit").fadeOut();
 					$("#Cexit").parent().removeClass("off");
@@ -157,14 +200,18 @@ Main.keyDown = function()
 				}
 				else alert("exit");
 			}else if($("#area").val()=="menu")
-			{
+			{        		
 				$("#transition").fadeIn(500,function(){
 					window.location.replace($("ul .selected").children("h1").html().toLowerCase()+".html");
 				});
 			}
+	        
 			break;
 		default:
 			alert("Unhandled key");
+		/* *****Sonud Effect*** */
+		sound("./sound/ErrorTone.mp3");
+        /* ***** End Sonud Effect*** */
 			break;
 	}
 };

@@ -1,4 +1,13 @@
-﻿function setOutletData(){
+﻿function sound(Sound) {
+	var audioElement = document.createElement('audio');
+	audioElement.setAttribute('src', Sound);
+	audioElement.setAttribute('autoplay', 'autoplay');
+    audioElement.addEventListener("load", function() {
+        audioElement.play();
+    }, true);
+}
+
+function setOutletData(){
 	var id = $(".selected").children(".itemId").val();
 	var zone = $(".selected").children(".itemZone").val();
 	var status = $(".selected").children(".itemStatus").val();
@@ -72,6 +81,11 @@ Main.keyDown = function()
 	switch(keyCode)
 	{
 		case tvKey.KEY_EXIT:
+	
+			/* *****Sonud Effect*** */
+			sound("./sound/ExitTone.mp3");
+	        /* ***** End Sonud Effect*** */
+	        
 			event.preventDefault();
 			$("#area").val("exit");
 			$("#up").parent().addClass("off");
@@ -85,6 +99,11 @@ Main.keyDown = function()
 			$("#exit").fadeIn();
 			break;
 		case tvKey.KEY_INFO:
+			
+			/* *****Sonud Effect*** */
+			sound("./sound/InfoTone.mp3");
+	        /* ***** End Sonud Effect*** */
+
 			$("#area").val("about");
 			$("#up").parent().addClass("off");
 			$("#down").parent().addClass("off");
@@ -114,6 +133,9 @@ Main.keyDown = function()
 			}
 			break;
 		case tvKey.KEY_LEFT:
+			/* *****Sonud Effect*** */
+			sound("./sound/MoveTone.mp3");
+	        /* ***** End Sonud Effect*** */
 			if($("#exitContainer").children(".buttonSelected").prev("button").length!=0)
 			{
 				$("#exitContainer").children(".buttonSelected").removeClass("buttonSelected").prev().addClass("buttonSelected");
@@ -122,6 +144,9 @@ Main.keyDown = function()
 			}
 			break;
 		case tvKey.KEY_RIGHT:
+			/* *****Sonud Effect*** */
+			sound("./sound/MoveTone.mp3");
+	        /* ***** End Sonud Effect*** */
 			if($("#exitContainer").children(".buttonSelected").next().length!=0)
 			{
 				$("#exitContainer").children(".buttonSelected").removeClass("buttonSelected").next().addClass("buttonSelected");
@@ -130,6 +155,9 @@ Main.keyDown = function()
 			}
 			break;
 		case tvKey.KEY_UP:
+			/* *****Sonud Effect*** */
+			sound("./sound/MoveTone.mp3");
+	        /* ***** End Sonud Effect*** */
 			if($("#left").children(".selected").index()>0)
 			{
 				$("#left").children(".selected").removeClass("selected").prev().addClass("selected");
@@ -149,6 +177,9 @@ Main.keyDown = function()
 			showList($("#left").children(".selected").index());
 			break;
 		case tvKey.KEY_DOWN:
+			/* *****Sonud Effect*** */
+			sound("./sound/MoveTone.mp3");
+	        /* ***** End Sonud Effect*** */
 			if($("#left").children(".selected").index()<$("#left").children(".item").length-1)
 			{
 				$("#left").children(".selected").removeClass("selected").next().addClass("selected");
@@ -186,6 +217,9 @@ Main.keyDown = function()
 			break;
 		default:
 			alert("Unhandled key");
+		/* *****Sonud Effect*** */
+		sound("./sound/ErrorTone.mp3");
+        /* ***** End Sonud Effect*** */
 			break;
 	}
 };
