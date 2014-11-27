@@ -11,11 +11,11 @@
 }
 
 #inAboutContainer{
-	width:84%;
-	height:100%;
+	width:80%;
+	height:105%;
 	background-color:white;
 	border-radius:5px;
-	margin: auto;
+	margin:1% auto;
 }
 
 #aboutContainer h1{
@@ -36,8 +36,8 @@
 }
 #aboutContainer img{
 	display:block;
-	width:80%;
-	height:80%;
+	width:50%;
+	height:auto;
 }
 #aboutContainer span{
 	color: black;
@@ -46,17 +46,16 @@
 	font-size: 18px;
 }
 #developperSection{
-	width:40%;
+	width:30%;
 	vertical-align:top;
 	display:inline-block;
 }
 #informationSection{
 	height: 80%;
-	width: 55%;
-	margin: 1%;
+	width: 60%;
+	margin-left: 25%;
 	display: inline-block;
 	vertical-align: top;
-	margin-top: 3%;
 }
 
 #informationSection h3{
