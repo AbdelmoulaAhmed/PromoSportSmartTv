@@ -91,7 +91,7 @@ Main.onLoad = function()
 		});
 		$.ajax({
 			type: "GET",
-			url: "http://"+link+"/PromoSportRSS/XML/resultatInternational.xml",
+			url: "http://"+link+"/PromoSportRSS/XML/resultatInternationalPROMOSPORT.xml",
 			dataType: "xml",
 			success: function(xml) {
 				$(xml).find('result').each(function(){
