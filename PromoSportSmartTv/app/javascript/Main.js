@@ -6,6 +6,48 @@ function sound(Sound) {
         audioElement.play();
     }, true);
 }
+function GoRight(){
+	if($("ul").children(".selected").next().length!=0)
+	{
+		$("#sectionInfo").animate({"top":"-17%"},300);
+		$("ul").children(".selected").removeClass("selected").next().addClass("selected");
+		$("ul").animate({"right":"+=30%"},600,function(){
+			$("#sectionInfo").children("span").html($(".selected").children("input").val());
+			$("#sectionInfo").animate({"top":"0%"},300);
+		});
+		
+	}
+	else
+	{
+		$("#sectionInfo").animate({"top":"-17%"},300);
+		$("ul").children(".selected").removeClass("selected").parent().children("li").first().addClass("selected");
+		$("ul").animate({"right":"0%"},600,function(){
+			$("#sectionInfo").children("span").html($(".selected").children("input").val());
+			$("#sectionInfo").animate({"top":"0%"},300);
+		});
+	}
+}
+function GoLeft(){
+	if($("ul").children(".selected").prev().length!=0)
+	{
+		$("#sectionInfo").animate({"top":"-17%"},300);
+		$("ul").children(".selected").removeClass("selected").prev().addClass("selected");
+		$("ul").animate({"right":"-=30%"},300,function(){
+			$("#sectionInfo").children("span").html($(".selected").children("input").val());
+			$("#sectionInfo").animate({"top":"0%"},300);
+		});
+
+	}
+	else
+	{
+		$("#sectionInfo").animate({"top":"-17%"},300);
+		$("ul").children(".selected").removeClass("selected").parent().children("li").last().addClass("selected");
+		$("ul").animate({"right":"90%"},600,function(){
+			$("#sectionInfo").children("span").html($(".selected").children("input").val());
+			$("#sectionInfo").animate({"top":"0%"},300);
+		});
+	}
+}
 var widgetAPI = new Common.API.Widget();
 var tvKey = new Common.API.TVKeyValue();
 var link="192.168.56.1";
@@ -19,7 +61,6 @@ Main.onLoad = function()
 	// Enable key event processing
 	this.enableKeys();
 	widgetAPI.sendReadyEvent();
-	//$(document).ready(function(){
 		$("#transition").fadeOut(1000);
 		$.ajax({
 			type: "GET",
@@ -33,7 +74,15 @@ Main.onLoad = function()
 				console.log(error.responseText);
 			}
 		});
-	//});
+		//$("ul").children(".selected").removeClass("selected");
+		if(parseFloat(localStorage.getItem("app"))>-1)
+		{
+			var index=parseInt(localStorage.getItem("app"));
+			for(var i=0;i<index;i++)
+			{
+				GoRight();
+			}
+		}
 };
 
 Main.onUnload = function()
@@ -109,25 +158,7 @@ Main.keyDown = function()
 	        
 			if($("#area").val()=="menu")
 			{
-				if($("ul").children(".selected").prev().length!=0)
-				{
-					$("#sectionInfo").animate({"top":"-17%"},300);
-					$("ul").children(".selected").removeClass("selected").prev().addClass("selected");
-					$("ul").animate({"right":"-=30%"},300,function(){
-						$("#sectionInfo").children("span").html($(".selected").children("input").val());
-						$("#sectionInfo").animate({"top":"0%"},300);
-					});
-
-				}
-				else
-				{
-					$("#sectionInfo").animate({"top":"-17%"},300);
-					$("ul").children(".selected").removeClass("selected").parent().children("li").last().addClass("selected");
-					$("ul").animate({"right":"90%"},600,function(){
-						$("#sectionInfo").children("span").html($(".selected").children("input").val());
-						$("#sectionInfo").animate({"top":"0%"},300);
-					});
-				}
+				GoLeft();
 			}else if($("#area").val()=="exit")
 			{
 				if($("#exitContainer").children(".buttonSelected").prev("button").length!=0)
@@ -145,25 +176,7 @@ Main.keyDown = function()
 	        
 			if($("#area").val()=="menu")
 			{
-				if($("ul").children(".selected").next().length!=0)
-				{
-					$("#sectionInfo").animate({"top":"-17%"},300);
-					$("ul").children(".selected").removeClass("selected").next().addClass("selected");
-					$("ul").animate({"right":"+=30%"},600,function(){
-						$("#sectionInfo").children("span").html($(".selected").children("input").val());
-						$("#sectionInfo").animate({"top":"0%"},300);
-					});
-					
-				}
-				else
-				{
-					$("#sectionInfo").animate({"top":"-17%"},300);
-					$("ul").children(".selected").removeClass("selected").parent().children("li").first().addClass("selected");
-					$("ul").animate({"right":"0%"},600,function(){
-						$("#sectionInfo").children("span").html($(".selected").children("input").val());
-						$("#sectionInfo").animate({"top":"0%"},300);
-					});
-				}
+				GoRight();
 			}else if($("#area").val()=="exit")
 			{
 				if($("#exitContainer").children(".buttonSelected").next().length!=0)
@@ -200,7 +213,8 @@ Main.keyDown = function()
 				}
 				else alert("exit");
 			}else if($("#area").val()=="menu")
-			{        		
+			{
+				localStorage.setItem("app", $(".selected").index());
 				$("#transition").fadeIn(500,function(){
 					window.location.replace($("ul .selected").children("h1").html().toLowerCase()+".html");
 				});
