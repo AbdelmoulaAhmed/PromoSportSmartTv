@@ -32,7 +32,7 @@ function showList(x){
 
 var widgetAPI = new Common.API.Widget();
 var tvKey = new Common.API.TVKeyValue();
-var link = "192.168.56.1";
+var link = "www.promo-sport.byethost7.com";
 var Main =
 {
 
@@ -46,7 +46,7 @@ Main.onLoad = function()
 	//$(document).ready(function(){
 		$.ajax({
 		type: "GET",
-		url: "http://"+link+"/promosportHTML/about.txt",
+		url: "about.txt",
 		dataType: "text",
 		success: function(text) {
 			$("#aboutContainer").html(text);

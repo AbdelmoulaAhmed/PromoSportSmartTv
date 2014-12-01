@@ -21,7 +21,7 @@ function putPrices(type,prices)
 
 var widgetAPI = new Common.API.Widget();
 var tvKey = new Common.API.TVKeyValue();
-var link = "192.168.56.1";
+var link = "www.promo-sport.byethost7.com";
 var Main =
 {
 
@@ -54,7 +54,7 @@ Main.onLoad = function()
 	//$(document).ready(function(){
 		$.ajax({
 			type: "GET",
-			url: "http://"+link+"/promosportHTML/about.txt",
+			url: "about.txt",
 			dataType: "text",
 			success: function(text) {
 				$("#aboutContainer").html(text);
@@ -66,7 +66,7 @@ Main.onLoad = function()
 		});
 		$.ajax({
 			type: "GET",
-			url: "http://"+link+"/PromoSportRSS/XML/prices.xml",
+			url: "http://"+link+"/XML/prices.xml",
 			dataType: "xml",
 			success: function(xml) {
 				$(xml).find('national').each(function(){
@@ -91,7 +91,7 @@ Main.onLoad = function()
 		});
 		$.ajax({
 			type: "GET",
-			url: "http://"+link+"/PromoSportRSS/XML/resultatInternationalPROMOSPORT.xml",
+			url: "http://"+link+"/XML/resultatInternationalPROMOSPORT.xml",
 			dataType: "xml",
 			success: function(xml) {
 				$(xml).find('result').each(function(){
@@ -118,7 +118,7 @@ Main.onLoad = function()
 		});
 		$.ajax({
 			type: "GET",
-			url: "http://"+link+"/PromoSportRSS/XML/resultatNational.xml",
+			url: "http://"+link+"/XML/resultatNational.xml",
 			dataType: "xml",
 			success: function(xml) {
 				alert("national results has been parsed.");

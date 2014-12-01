@@ -50,7 +50,7 @@ function GoLeft(){
 }
 var widgetAPI = new Common.API.Widget();
 var tvKey = new Common.API.TVKeyValue();
-var link="192.168.56.1";
+var link="www.promo-sport.byethost7.com";
 var Main =
 {
 
@@ -61,7 +61,7 @@ Main.onLoad = function()
 	// Enable key event processing
 	this.enableKeys();
 	widgetAPI.sendReadyEvent();
-		$("#transition").fadeOut(1000);
+		$("#transition").delay(2000).fadeOut(1000);
 		$.ajax({
 			type: "GET",
 			url: "about.txt",

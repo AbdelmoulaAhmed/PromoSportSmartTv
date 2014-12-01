@@ -27,7 +27,7 @@ function sound(Sound) {
 }
 var widgetAPI = new Common.API.Widget();
 var tvKey = new Common.API.TVKeyValue();
-var link = "192.168.56.1";
+var link = "www.promo-sport.byethost7.com";
 var Main =
 {
 
@@ -44,7 +44,7 @@ Main.onLoad = function()
 		$("#transition").fadeOut(500);
 	$.ajax({
 		type: "GET",
-		url: "http://"+link+"/promosportHTML/about.txt",
+		url: "about.txt",
 		dataType: "text",
 		success: function(text) {
 			$("#aboutContainer").html(text);
@@ -56,7 +56,7 @@ Main.onLoad = function()
 	});
 	$.ajax({
 		type: "GET",
-		url: "http://"+link+"/PromoSportRSS/XML/prediction.xml",
+		url: "http://"+link+"/XML/prediction.xml",
 		dataType: "xml",
 		success: function(xml) {
 			alert("prediction parsing done.");
