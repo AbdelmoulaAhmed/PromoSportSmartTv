@@ -39,7 +39,7 @@ Main.onLoad = function()
 
 Main.onUnload = function()
 {
-
+	$("#transition").fadeOut(500);
 };
 
 Main.enableKeys = function()

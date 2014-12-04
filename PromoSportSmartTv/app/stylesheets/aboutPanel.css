@@ -3,22 +3,22 @@
 }
 #aboutContainer{
 	position:absolute;
-	z-index:999;
+	z-index:100;
 	top:0;
 	left:0;
 	background-color:rgba(0,0,0,0.9);
 	width:90%;
-	height:77%;
+	height:100%;
 	padding:5%;
 	display:none;
 }
 
 #inAboutContainer{
 	width:80%;
-	height:105%;
+	height:81%;
 	background-color:white;
 	border-radius:5px;
-	margin:1% auto;
+	margin:0.2% auto;
 }
 
 #aboutContainer h1{

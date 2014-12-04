@@ -42,7 +42,7 @@ function GoLeft(){
 	{
 		$("#sectionInfo").animate({"top":"-17%"},300);
 		$("ul").children(".selected").removeClass("selected").parent().children("li").last().addClass("selected");
-		$("ul").animate({"right":"90%"},600,function(){
+		$("ul").animate({"right":"55%"},600,function(){
 			$("#sectionInfo").children("span").html($(".selected").children("input").val());
 			$("#sectionInfo").animate({"top":"0%"},300);
 		});
@@ -77,7 +77,7 @@ Main.onLoad = function()
 		//$("ul").children(".selected").removeClass("selected");
 		if(parseFloat(localStorage.getItem("app"))>-1)
 		{
-			var index=parseInt(localStorage.getItem("app"));
+			var index=parseInt(sessionStorage.getItem("app"));
 			for(var i=0;i<index;i++)
 			{
 				GoRight();
@@ -125,6 +125,7 @@ Main.keyDown = function()
 			if($("#area").val()=="menu")
 			{				
 		        audioElement.play();
+		        $("#area").val("about");
 				$("#return").parent().removeClass("off");
 				$("#Cexit").parent().addClass("off");
 				$("#left").parent().addClass("off");
@@ -136,20 +137,19 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_RETURN:
 		case tvKey.KEY_PANEL_RETURN:
-			
-			event.preventDefault();
-			
-			/* *****Sonud Effect*** */
-			sound("./sound/PopTone.mp3");
-	        /* ***** End Sonud Effect*** */
-			
-			$("#return").parent().addClass("off");
-			$("#Cexit").parent().removeClass("off");
-			$("#left").parent().removeClass("off");
-			$("#right").parent().removeClass("off");
-			$("#enter").parent().removeClass("off");
-			$("#about").parent().removeClass("off");
-			$("#aboutContainer").fadeOut();
+			if($("#area").val()=="about")
+			{
+				event.preventDefault();
+				$("#area").val("menu");
+				sound("./sound/PopTone.mp3");
+				$("#return").parent().addClass("off");
+				$("#Cexit").parent().removeClass("off");
+				$("#left").parent().removeClass("off");
+				$("#right").parent().removeClass("off");
+				$("#enter").parent().removeClass("off");
+				$("#about").parent().removeClass("off");
+				$("#aboutContainer").fadeOut();
+			}
 			break;
 		case tvKey.KEY_LEFT:
 			/* *****Sonud Effect*** */
@@ -214,7 +214,7 @@ Main.keyDown = function()
 				else alert("exit");
 			}else if($("#area").val()=="menu")
 			{
-				localStorage.setItem("app", $(".selected").index());
+				sessionStorage.setItem("app", $(".selected").index());
 				$("#transition").fadeIn(500,function(){
 					window.location.replace($("ul .selected").children("h1").html().toLowerCase()+".html");
 				});

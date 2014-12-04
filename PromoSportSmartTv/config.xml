@@ -3,10 +3,10 @@
   <cpname itemtype="string"/>  
   <cplogo itemtype="string"/>  
   <cpauthjs itemtype="string"/>  
-  <ThumbIcon itemtype="string"/>  
-  <BigThumbIcon itemtype="string"/>  
-  <ListIcon itemtype="string"/>  
-  <BigListIcon itemtype="string"/>  
+  <ThumbIcon>icon/sampleIcon_106_87.png</ThumbIcon>
+  <BigThumbIcon>icon/sampleIcon_115_95.png</BigThumbIcon>
+  <ListIcon>icon/sampleIcon_85_70.png</ListIcon>
+  <BigListIcon>icon/sampleIcon_95_78.png</BigListIcon> 
   <category itemtype="string"/>  
   <autoUpdate itemtype="boolean">n</autoUpdate>  
   <ver itemtype="string">0.100</ver>  
