@@ -1,7 +1,7 @@
 ﻿<div id="inAboutContainer">
 				<div id="informationSection">
 					<h3>App Info</h3>
-					<p>This application provides you informations about matchs results, gives you an idea about incomming match and help you where to find outlets and fill promosport ticket</p>
+					<p>This application provides you informations about matchs results, gives you an idea about incomming match and fill promosport ticket</p>
 					<h3>Primary Language</h3>
 					<p>English</p>
 					<h3>Developped By</h3>
