@@ -21,7 +21,7 @@ Main.onLoad = function()
 	this.enableKeys();
 	widgetAPI.sendReadyEvent();
 	//$(document).ready(function(){
-		$("#transition").fadeOut(500);
+		$("#transition").delay(1000).fadeOut(500);
 		$.ajax({
 			type: "GET",
 			url: "about.txt",
@@ -39,7 +39,7 @@ Main.onLoad = function()
 
 Main.onUnload = function()
 {
-	$("#transition").fadeOut(500);
+	//$("#transition").fadeOut(500);
 };
 
 Main.enableKeys = function()
@@ -102,7 +102,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_LEFT:
 			/* *****Sonud Effect*** */
-			sound("./sound/ErrorTone.mp3");
+			sound("./sound/PopTone.mp3");
 	        /* ***** End Sonud Effect*** */
 			if($("#area").val()=="exit")
 			{
@@ -116,7 +116,7 @@ Main.keyDown = function()
 			break;
 		case tvKey.KEY_RIGHT:
 			/* *****Sonud Effect*** */
-			sound("./sound/ErrorTone.mp3");
+			sound("./sound/PopTone.mp3");
 	        /* ***** End Sonud Effect*** */
 			if($("#area").val()=="exit")
 			{

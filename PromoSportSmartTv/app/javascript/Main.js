@@ -211,7 +211,7 @@ Main.keyDown = function()
 					$("#Cexit").parent().removeClass("off");
 					$("#about").parent().removeClass("off");
 				}
-				else alert("exit");
+				else widgetAPI.sendExitEvent();
 			}else if($("#area").val()=="menu")
 			{
 				sessionStorage.setItem("app", $(".selected").index());
